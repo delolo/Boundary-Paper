@@ -1,7 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
-\contentsline {section}{\numberline {2}The Claim}{2}{section.2}
-\contentsline {section}{\numberline {3}The Proof}{4}{section.3}
-\contentsline {subsection}{\numberline {3.1}Poisson Sprinklings for $\delimiter "426830A N_{max}\delimiter "526930B $ and $\delimiter "426830A N_{min}\delimiter "526930B $}{4}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Lightcone Volumes}{6}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}The mean of $S^{(d)}_{GHY}[\mathcal C]$}{9}{subsection.3.3}
-\contentsline {section}{\numberline {4}Fluctuations}{10}{section.4}

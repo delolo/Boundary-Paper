@@ -1,8 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
-\contentsline {section}{\numberline {2}The Claims}{2}{section.2}
-\contentsline {section}{\numberline {3}The Proof}{9}{section.3}
-\contentsline {subsection}{\numberline {3.1}Poisson Sprinklings for $\left \delimiter "426830A \textbf {N}_{max}^{\tmspace +\medmuskip {.2222em} (m)}\right \delimiter "526930B $ and $\left \delimiter "426830A \textbf {N}_{min}^{\tmspace +\medmuskip {.2222em} (n)}\right \delimiter "526930B $}{9}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Lightcone Volumes}{10}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}The mean of $\textbf {S}^{ (d)}_{GHY}[\mathcal {C}^-,\mathcal {C}^+;\mathaccentV {vec}17E{p},\mathaccentV {vec}17E{q}]$}{13}{subsection.3.3}
-\contentsline {section}{\numberline {4}Fluctuations}{16}{section.4}
-\contentsline {section}{\numberline {5}A Candidate Boundary Term for an Alexandrov Interval}{17}{section.5}
