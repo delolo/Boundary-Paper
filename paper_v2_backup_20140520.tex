@@ -1,0 +1,259 @@
+% CURRENTLY BEING EDITED OFF-LINE BY: IAN
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{jheppub}
+
+\newcommand{\IGNORE}[1]{}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+
+\title{Gibbons-Hawking-York Boundary Term in Causal Sets}
+ \author[a]{M. Buck}
+ \author[a,b]{\!, F. Dowker}
+ \author[a]{and I. Jubb\,}
+\affiliation[a]{Theoretical Physics Group, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K.}
+\affiliation[b]{Institute for Quantum Computing, University of Waterloo, ON, N2L 2Y5, Canada}
+
+\abstract{ 
+We show some stuff.
+}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\section{The main result for spacelike surfaces}
+\begin{enumerate}
+\item MB1: need to justify why higher order terms can be ignored.
+\item MB1: why the threefold coordinate transformation? why no just RNCs at the base?
+\item MB1: 
+\end{enumerate}
+Consider a sufficiently well-behaved spacetime $(M,g)$ and Cauchy surface $\Sigma$ in $M$. The causal past and future sets $M^\pm=J^\pm(\Sigma)$ form a partition of $M$ and $\partial M^\pm = \Sigma$. The Gibbons-Hawking-York boundary term for $M^\pm$ is in this case given by
+$$
+S_{GHY} = \pm\frac1{\kappa^2} \int_{\Sigma} d^{d-1}x \sqrt{-h} K
+$$
+where $K$ is the trace of the extrinsic curvature $K_{\mu\nu}=h_{\mu}^\rho h_\nu^\sigma \nabla_\rho n_\sigma$ of $\Sigma$ defined with future-pointing timelike unit normal $n$ \IGNORE{\partial_\mu S/\sqrt{g^{\mu\nu}\partial_\mu S\partial_\nu S}$}. 
+
+The extrinsic curvature of a spacelike hypersurface can be identified with the volume gradient across that hypersurface [[MB1: HOW?]]. On the causal set, the analogue of a spacelike hypersurface is a maximal anti-chain, i.e. a subset $A$ of $C$, no two elements of which are related. The intuitive analogue of the boundary term would then be the rate of change of the number of causal set elements below and above the antichain. We shall see that this intuitive idea indeed bears out.
+
+Consider a causal set $\mathcal C$ obtained by a Poisson sprinkling of density $\rho$ into a spacetime $(M,g)$. A Cauchy surface $\Sigma\subset M$ induces a partition $\mathcal C = \mathcal C^+ \cup\, \mathcal C^-$ of the sprinkling, where $\mathcal C^\pm$ denotes the restriction of $\mathcal C$ to the points sprinkled to the causal future/past of $\Sigma$. Let us denote the number of maximal elements in $\mathcal C^-$ and the number of minimal elements in $\mathcal C^+$ by $N_{min}$ and $N_{max}$, respectively.
+%\IGNORE{\be
+%\begin{aligned}
+%N_{min}=|\left\{x\in\mathcal C^+:\nexists\;y\in\mathcal C^+ s.t. \right\}|
+%\end{aligned}
+%\ee} 
+We propose the following definition for the discrete Gibbons-Hawking-York boundary term for a causal set $\mathcal C$ in $d$ spacetime dimensions:
+\be\label{GH_boundary_to_causet}
+S^{(d)}_{GHY}[\mathcal C]=\rho^{\frac{2}{d}-1}c_{d}\left\langle N_{max}-N_{min}\right\rangle.
+\ee
+The constant $c_{d}$ only depends on the dimension and is given by
+
+\be\label{Cn}
+c_{d}=\frac{d(d+1)}{2(d+2)\Gamma\left(\frac{2}{d}\right)}\left[\frac{A_{d-2}}{d(d-1)}\right]^{\frac{2}{d}}.
+\ee
+
+To support this proposal we show that in the limit of infinite sprinkling density we obtain
+\be
+\lim_{\rho\rightarrow\infty}S^{(d)}_{GHY}[\mathcal C] = \frac1{\kappa^2} \int_{\Sigma} d^{d-1}x \sqrt{-h} K.\label{eq:mainconjecture}
+\ee
+%MB1: (too vague) During the calculation approximations will be made. These approximations are justified on the grounds that if certain orders are retained throughout the calculation they will in fact vanish in the limit $\rho \rightarrow \infty$
+
+In order to prove~\eqref{eq:mainconjecture} we choose a set of synchronous, or Gaussian Normal Coordinates (GNC) adapted to $\Sigma$ such that in a neighbourhood $U_\Sigma$ of $\Sigma$ the line element is
+\be
+ds^2 = -dt^2 + h_{ij}(t,\mathbf x) dx^i dx^j.
+\ee
+In these coordinates, the surface $\Sigma$ corresponds to the set $t=0$. 
+%\be\label{GNC_metric}
+%g_{\mu\nu}(x)=
+%\begin{pmatrix}
+ %-1&0 \\
+% 0&h_{ij}(x)
+%\end{pmatrix}.
+%\ee
+
+%In order to find $N_{max}$, the number of maximal points below the surface, one has to use the fact that the points have been sprinkled with a Poisson distribution. 
+For a sprinkling into $(M,g)$, the probability that a sprinkled point $x$ below the surface is \emph{maximal} is given by the probability that the sprinkling contains no points in the intersection $J^{+}(x)\cap J^{-}(\Sigma)$ of the causal future of $p$ with the causal past of the surface $\Sigma$. This region will in general be some sort of curvy $d$-dimensional cone. The Poisson distribution assigns a probability
+\be\label{Poisson}
+\mathbb P\left(\text{no points in }J^{+}(x)\cap J^{-}(\Sigma)\right)=e^{-\rho V(x,\Sigma)}
+\ee
+to this event, where $V(x,\Sigma):=V(J^{+}(x)\cap J^{-}(\Sigma))$ is the spacetime volume of the region $J^{+}(x)\bigcap J^{-}(\Sigma)$. The probability of sprinkling an element into an infinitesimal volume element $d^dx$ at $x\in M$ is $\rho\sqrt{-g(x)}d^dx$, where $\rho$ is the density of the sprinkling, and so the expected number of maximal points below $\Sigma$ is
+
+\be\label{eq:nmax}
+\left\langle N_{max}\right\rangle =\int_{J^{-}(\Sigma)}d^{d}x\:\sqrt{-g}\ \rho\ e^{-\rho V(x,\Sigma)}
+\ee
+
+Similarly the expected number of minimal points above $\Sigma$ is
+\be\label{eq:nmin}
+\left\langle N_{min}\right\rangle =\int_{J^{+}(\Sigma)}d^{n}x\:\sqrt{-g}\ \rho\ e^{-\rho V(\Sigma,x)}
+\ee
+where $V(\Sigma,x):=V(J^{+}(\Sigma)\cap J^{-}(x))$.
+
+
+[[IJ: NEED A FIGURE FOR THIS NEXT BIT]]
+
+Both quantities will diverge, but if their difference $\langle N_{max}\rangle - \langle N_{min}\rangle = \langle N_{max} - N_{min}\rangle$ grows slower than or at order $\rho^{1-\frac2d}$, the proposed action~\eqref{GH_boundary_to_causet} will tend to a finite value in the continuum limit. 
+
+If we pick a point $x_0=(0,\mathbf{x})\in \Sigma$ on the surface that has the same spatial coordinates as $x=(t,\mathbf{x})$ then the coordinate time, $t$, is the proper time elapsed along the unique geodesic between $x_0$ and $x$. The volume $V(\Sigma,x)$ then only depends on $t$. Now as $\rho\rightarrow\infty$, we may pick any $\epsilon>0$ such that the contribution to \eqref{eq:nmax} and \eqref{eq:nmin} from points with $|t|>\epsilon$ will be negligible. We assume now that for large enough $\rho$, the region $\left\{|t|<\epsilon\right\}$ is entirely contained in the neighbourhood $U_\Sigma$ in which the GNC are valid.
+Equations \eqref{eq:nmax} and \eqref{eq:nmin} can then be simplified as any time, $t$, which is far away from the surface will give rise to a large volume, which will then be exponentially suppressed as $\rho \rightarrow \infty$. More technically, if we choose some finite coordinate distance $\varepsilon$ away from the surface, either to the past or future, then any volume $V(p,\Sigma)$ or $V(\Sigma,q)$ with $|t|>\varepsilon$ will contribute nothing to the integral as $\rho \rightarrow \infty$. This $\varepsilon$ can be chosen arbitrarily close to $0$ allowing one to expand metric in $t$ about $t=0$. This gives
+
+\begin{align}\label{eq:nmax_and_eq:nmin}
+\left\langle N_{max}\right\rangle & =\int_{\Sigma}d^{d-1}x\int_{-\varepsilon}^{0}dt\:
+h^{\frac{1}{2}}\left(1+
+\frac{1}{2}\frac{\dot{h}}{h}t+O(t^2)\right)
+ \rho\ e^{-\rho V(-t,\mathbf{x};0,\mathbf{x})}
+\\
+\left\langle N_{min}\right\rangle & =\int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
+h^{\frac{1}{2}}\left(1+
+\frac{1}{2}\frac{\dot{h}}{h}t+O(t^2)\right) \rho\ e^{-\rho V(0,\mathbf{x};t,\mathbf{x})}
+\end{align}
+where $h\equiv det\left(h_{ij}(0,\mathbf{x})\right)$ and $\dot{}\equiv \frac{\partial}{\partial t}$. The metric determinant has been in expanded in small $t$. The volume functions have been rewritten as follows: $V(x,\Sigma)=V(p,p_0)=V(-t,\mathbf{x};0,\mathbf{x})$ and $V(\Sigma,q)=V(q_0,q)=V(0,\mathbf{x};t,\mathbf{x})$
+
+[[OLD SECTION THAT MB WANTED TO REWRITE]]
+[[MB: Need to rewrite this paragraph]]. 
+The volumes will depend on the proper time elapsed along the unique geodesic from a point in $\Sigma$ to a point $p$ such that the spatial coordinates remain unchanged. This is shown in Fig. . The coordinate time, $t$, is in fact the same as the proper time in the GNC we have chosen. Equations (\ref{eq:nmax}) and (\ref{eq:nmin}) can then be simplified as any time, $t$, which is far away from the surface will give rise to a large volume, which will then be exponentially suppressed as $\rho \rightarrow \infty$. We can choose a distance $\varepsilon$ away from the surface such that beyond it all volumes will be suppressed in the final limit. (\ref{eq:nmax}) and (\ref{eq:nmin}) are now given by
+
+\begin{align}
+\left\langle N_{max}\right\rangle & =\int_{\Sigma}d^{d-1}x\int_{-\varepsilon}^{0}dt\:
+h^{\frac{1}{2}}\left(1+
+\frac{1}{2}\frac{\dot{h}}{h}t+O(t^2)\right)
+ \rho\ e^{-\rho V(t,\mathbf{x};0,\mathbf{x})}
+\\
+\left\langle N_{min}\right\rangle & =\int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
+h^{\frac{1}{2}}\left(1+
+\frac{1}{2}\frac{\dot{h}}{h}t+O(t^2)\right) \rho\ e^{-\rho V(0,\mathbf{x};t,\mathbf{x})}
+\end{align}
+where $h\equiv det\left(h_{ij}(0,\mathbf{x})\right)$ and $\dot{}\equiv \frac{\partial}{\partial t}$. The metric determinant has been in expanded in small $t$.
+[[END OF OLD SECTION]]
+
+The volumes can also be approximated using the fact that the tips of the cones are close to the surface, as $|t|\leq\varepsilon$ in the integral limits. The process for utilising the possible simplifications will be outlined below for the cone to the future of $\Sigma$, as the process for the past cone is nearly identical. Riemann normal coordinates are integral to the following calculation so it is worth noting the relevant formulas before jumping in. 
+
+
+
+The volumes of the truncated lightcones can be found as follows. Consider the past lightcone emanating at the point $p_0=(t_0,\mathbf x_0)$. There is a unique point $q_0=(0,\mathbf x_0)$ on $\Sigma$ associated with $p_0$, separated from $p_0$ by a proper time $t_0$. Now change  spatial coordinates to primed coordinates $(t',\mathbf{x} ')$, such that the spatial metric at $P$ is flat. This is equivalent to using Riemann normal coordinates (RNC), but just in the spatial dimensions. We require
+\be\label{metric_flat_conditions}
+h_{i'j'}(p_0)=\delta_{ij}  \;\;\text{and}\;\; \Gamma^{i'}_{j'k'}(p_0)=0.
+\ee
+This of course still allows for $\Gamma^{0}_{ij}(P)\neq0$. The surface $\Sigma$ still corresponds to $t'=t=0$ after this coordinate change. We now change from these coordinates to full spacetime RNC to calculate the volume. The new coordinates, $z^\mu$, are related to the previous coordinates via
+
+\be\label{RNC_to_GNC_flat}
+z^\mu=\delta^\mu_\nu y^\nu+\frac{1}{2}\delta^{\tilde{\mu}}_{\mu '}\Gamma^{\mu '}_{\alpha '\beta '}(P)x'^{\alpha '}x'^{\beta '}+O(x'^3)
+\ee
+This is the standard transformation to RNC. The inverse relations are given by
+
+\be\label{inverse_trans}
+x'^{\mu '}=\delta^{\mu '}_{\tilde{\mu}}\tilde{x}^{\tilde{\mu}}+O(\tilde{x}^2)
+\ee
+
+Using (\ref{inverse_trans}) in (\ref{RNC_to_GNC_flat})
+ allows one to find the equation for the surface in RNC. It is given by
+
+\be\label{RNC_surface}
+\tilde{t}=\frac{1}{2}\Gamma^{t'}_{i'j'}(P)\delta^{i'}_{\tilde{i}}\delta^{j'}_{\tilde{j}}
+\tilde{x}^{\tilde{i}}\tilde{x}^{\tilde{j}}+O(\tilde{x}^3)
+\ee
+when $t=t'=0$. It is a quadratic in the spatial variables.
+
+Following (Sumati paper) we find the equation for the top part of the cone [[MB: need to define what you mean]] is simply
+
+\be\label{top_of_cone_eqn}
+\tilde{t}=-\tilde{r}+T
+\ee
+to the order we require. If we kept higher orders the top part would have an elliptic cross section. The volume would then acquire terms of $O(T^{n+2})$ which are suppressed in the final limit. The shape of the cone has been altered from the curvy cone to the one shown in Fig.
+
+We now have our integral boundaries and we can attempt the integral. From (Sumati paper) the volume of the top cone can be written as [[MB1: integration region is wrong]]
+
+\begin{gather}\label{volume_from_sumati}
+\begin{aligned}
+V(0,\mathbf{x}_0;T,\mathbf{x}_0) & =\int_{J^{+}(\Sigma)\bigcap J^{-}(T,\mathbf{\tilde{x}}_0)}d^n\tilde{x}\;  \sqrt{-g} \\
+& =\int_{J^{+}(0,\mathbf{\tilde{x}})\bigcap J^{-}(T,\mathbf{\tilde{x}}_0)}d^n\tilde{x}\;\\
+ & +\int_{flat\;cone}d^n\tilde{x}\left(-\frac{1}{6}\tilde{x}^{\tilde{c}}\tilde{x}^{\tilde{d}}
+R_{\tilde{c}\tilde{d}}(0,\mathbf{\tilde{x}}_0)\right)
+\end{aligned}
+\end{gather}
+where the flat cone is the cone you would have in a flat spacetime [[MB1: need to specify what you mean]]. The flat cone term comes in at $O(T^{n+2})$ and so can be ignored. The origins of the coordinate systems agree, as do the points at the tips of the cones in each coordinate system, thus the volume can be a function of the original GNC. The integral boundaries of the first term can be approximated from equations (\ref{RNC_surface}) and (\ref{top_of_cone_eqn}). Equation (\ref{top_of_cone_eqn}) can be written in the radial coordinate $\tilde{r}^2={\tilde{x}_{1}}^2+...+{\tilde{x}_{d-1}}^2$ as
+
+\be\label{RNC_surface_in_r}
+\tilde{t}=\frac{1}{2}\left(\Gamma^{t'}_{i'j'}(0,\mathbf{x}_0)\delta^{i'}_{\tilde{i}}
+\delta^{j'}_{\tilde{j}}
+\frac{\tilde{x}^{\tilde{i}}
+\tilde{x}^{\tilde{j}}}{{\tilde{r}}^2}\right)
+{\tilde{r}}^2
+=\frac{1}{2}f(\tilde{\phi}){\tilde{r}}^2
+\ee
+where $f(\tilde{\phi})$ only depends on the angular coordinates $\tilde{\phi}_1,..,\tilde{\phi}_{n-2}$.
+
+The volume then becomes
+
+\be\label{volume_with_approx}
+V(0,\mathbf{x}_0;T,\mathbf{x}_0)=\int_{S^{n-2}}
+d\tilde{\Omega}_{n-2}
+\int_{0}^{T}\tilde{r}^{n-2}dr
+\int_{\frac{1}{2}f(\tilde{\phi})\tilde{r}^2}^{-\tilde{r}+T}
+d\tilde{t}
+\ee
+where the max limit on $\tilde{r}$ comes from solving the equation $\frac{1}{2}f(\tilde{\phi})\tilde{r}^2_{max}=
+-\tilde{r}_{max}+T$ and expanding in $T$ to the lowest order necessary. Evaluating this integral gives
+
+\be\label{volume_no_K}
+V(0,\mathbf{x}_0;T,\mathbf{x}_0)
+=\frac{A_{n-2}}{n(d-1)}T^n\left(1-\frac{n}{2(n+1)}\Gamma^{t'}_{i'j'}(0,\mathbf{x}_0)\delta^{i'j'}T\right)
++O(T^{n+2})
+\ee
+We observe that $\Gamma^{t'}_{i'j'}(0,\mathbf{x}_0)\delta^{i'j'}$ is written in GNC with spatial flatness at $P$ (the $primed$ indices), although it is a scalar and so is independent of coordinate choice. The extrinsic curvature of the surface in these coordinates is given by
+
+\be\label{K_eqn}
+K(0,\mathbf{x}_0)
+=g^{\mu '\nu '}\nabla_{\mu '}n_{\nu '}
+=-\Gamma^{t'}_{i'j'}(0,\mathbf{x}_0)\delta^{i'j'}
+\ee
+where $n_{\nu '}=(1,0,0)$ is the surface normal. Thus we can directly substitute in for $K$ in (\ref{volume_no_K}) to obtain
+
+\begin{align}
+V(0,\mathbf{x}_0;T,\mathbf{x}_0)
+&=\frac{A_{n-2}}{n(d-1)}T^n\left(1+\frac{n}{2(n+1)}K(0,\mathbf{x}_0)T\right)
++O(T^{n+2}) \label{top_volume_with_K}\\
+V(-T,\mathbf{x}_0;0,\mathbf{x}_0)
+&=\frac{A_{n-2}}{n(d-1)}T^n\left(1-\frac{n}{2(n+1)}K(0,\mathbf{x}_0)T\right)
++O(T^{n+2}) \label{bottom_volume_with_K}
+\end{align}
+where (\ref{bottom_volume_with_K}) is the volume for the bottom cone, and can be found from similar arguments. These results do not disagree with (Sumati paper or Myrhiem), which states that the first correction to a small causal diamond is $O(T^{n+2})$. The total volume for a causal diamond would be a sum of (\ref{top_volume_with_K}) and (\ref{bottom_volume_with_K}), and therefore $O(T^{n+1})$ terms would cancel.
+
+Let us now use these volume functions in the expressions for $\left\langle N_{max}\right\rangle$ and $\left\langle N_{min}\right\rangle$ to calculate the $\left\langle N_{max}-N_{min}\right\rangle$ term in equation (\ref{GH_boundary_to_causet}) as $\rho \rightarrow \infty$. We have
+
+\begin{gather}\label{eq:nmax_eq:nmin_start}
+\begin{aligned}
+\lim_{\rho \to \infty}\left\langle N_{max}-N_{min} \right\rangle &= \\
+\lim_{\rho \to \infty}\rho
+\int_{\Sigma}d^{d-1}x & \int_{-\varepsilon}^{0}dt\
+h^{\frac{1}{2}}\left(1+
+\frac{1}{2}\frac{\dot{h}}{h}t-\rho B(-1)^{n}t^{n+1}\right)e^{-\rho A(-1)^{n}t^{n}} \\
+-\rho\int_{\Sigma}d^{d-1}x &
+\int_{0}^{\varepsilon}dt\
+h^{\frac{1}{2}}\left(1+
+\frac{1}{2}\frac{\dot{h}}{h}t-\rho Bt^{n+1}\right)e^{-\rho At^{n}}
+\end{aligned}
+\end{gather}
+where we have defined
+
+\begin{gather}\label{A_and_B_defn}
+\begin{aligned}
+A & \equiv \frac{A_{n-2}}{n(d-1)} \\
+B & \equiv \frac{A_{n-2}}{2(d-1)(d+1)}K(0,\mathbf{x})
+\end{aligned}
+\end{gather}
+and we have expanded the $O(t^{n+1})$ parts of the exponentials. This is allowed as the higher power of $t$ means they are suppressed more in the final limiting procedure. Using the fact that in GNCs, $K(0,\mathbf{x})=-\frac{1}{2}\frac{\dot{h}}{h}$, the integral can be found to be
+
+\be\label{eq:nmax_eq:nmin_end}
+\lim_{\rho \to \infty}\left\langle N_{max}-N_{min} \right\rangle=\lim_{\rho \to \infty}
+\rho^{1-\frac{2}{n}}\frac{2(n+2)}{n(n+1)}
+\left[\frac{A_{n-2}}{n(d-1)}\right]^{-\frac{2}{n}}
+\Gamma\left(\frac{2}{n}\right)\int_{\Sigma}d^{d-1}x\
+h^{\frac{1}{2}}K(0,\mathbf{x})
+\ee
+The gamma function appears as a result of taking integral limits to $\infty$ as $\rho\rightarrow\infty$, while still retaining the $\rho$ outside the integral. $K(0,\mathbf{x})$ is evaluated at the surface and is therefore the same $K$ as in equation (\ref{GH_boundary_to_causet}). We can therefore conclude that to make (\ref{GH_boundary_to_causet}) true we need a factor $\rho^{\frac{2}{n}-1}$ to cancel the factors of $\rho$ above and a value of $C_n$ equal to that of equation (\ref{Cn}).
+
+
+\end{document}

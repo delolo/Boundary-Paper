@@ -1,0 +1,14 @@
+This is TeX, Version 3.1415926 (TeX Live 2013/MacPorts 2013_6) (format=tex 2014.6.6)  14 AUG 2014 14:27
+**mnotes.ins
+(./mnotes.ins
+! I can't find file `docstrip.tex'.
+l.6 \input docstrip.tex
+                       
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! Emergency stop.
+l.6 \input docstrip.tex
+                       
+End of file on the terminal!
+
+No pages of output.

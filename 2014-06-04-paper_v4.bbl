@@ -1,0 +1,12 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{Gibbons_Hawking_Boundary}
+G.~Gibbons and S.~Hawking, {\it {Action Integrals and Partition Functions in
+  Quantum Gravity}},  {\em Phys.Rev.} {\bf D15} (1977) 2752--2756.
+
+\bibitem{Khetrapal_Sumati:Causal_Diamond_Volume}
+S.~Khetrapal and S.~Surya, {\it {Boundary Term Contribution to the Volume of a
+  Small Causal Diamond}},  {\em Class.Quant.Grav.} {\bf 30} (2013) 065005,
+  [\href{http://xxx.lanl.gov/abs/1212.0629}{{\tt arXiv:1212.0629}}].
+
+\end{thebibliography}\endgroup
