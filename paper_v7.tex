@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{jheppub}
-\usepackage{marginnote,xparse,changepage,caption,subfigure}
+\usepackage{marginnote,xparse,changepage,caption,graphicx,subcaption}
 
 \newcommand{\IGNORE}[1]{}
 \newcommand{\be}{\begin{equation}}
@@ -68,19 +68,17 @@ In the continuum the GHY term can be calculated for a spacelike hypersurface, $\
 Determining rules for a partition to correspond to a timelike hypersurface in the continuum is extremely difficult and no satisfactory answer has been found yet. The situation for a null hypersurface is as follows. For any finite density sprinkling into a manifold with a null hypersurface, that null hypersurface will partition the causal set in such a way that agrees with the definition of a spacelike partition. We should really refer to such a partition as ``non-timelike", but as we are dealing with spacelike hypersurfaces for most of this paper we shall continue to call such a partition spacelike. To aid in the understanding of why our definition falls short in distinguishing a spacelike and null hypersurface imagine a finite density sprinkling into a patch of $2$-dimensional Minkowski spacetime. Figure~\ref{fig:low_density_sprinkling_with_null_and_spacelike} shows how, given a null surface that partitions the causet into two parts, we can tilt the surface slightly so that it is now spacelike, while still preserving the partition. Figure~\ref{fig:high_density_sprinkling_with_null_and_spacelike} shows that even as we increase the density of the sprinkling we can tilt the surface by a smaller amount such that the partition remains unchanged.
 
 \begin{figure}
-\IGNORE{
         \centering
-        \begin{subfigure}[b]{0.5\textwidth}
+        \begin{subfigure}[b]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{low_density_sprinkling_with_null_and_spacelike}
                 \caption{low density sprinkling}
                 \label{fig:low_density_sprinkling_with_null_and_spacelike}
         \end{subfigure}
-        \begin{subfigure}[b]{0.5\textwidth}
+        \begin{subfigure}[b]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{high_density_sprinkling_with_null_and_spacelike}
                 \caption{high density sprinkling}
                 \label{fig:high_density_sprinkling_with_null_and_spacelike}
         \end{subfigure}
-        }
         \caption{The partition induced by the sprinkling is unchanged after tilting the surface between null and spacelike. With an even higher density, as in (b), one can simply titl the surface by some smaller amount to keep the partition unaltered.}\label{fig:animals}
 \end{figure}
 
