@@ -1,0 +1,4 @@
+*.tox
+*.aux
+*.log
+*.synctex.gz
