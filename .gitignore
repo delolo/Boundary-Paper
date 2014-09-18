@@ -1,5 +1,6 @@
 *.tox
 *.aux
 *.log
+*.out
 *.synctex.gz
 paper_v*.pdf
