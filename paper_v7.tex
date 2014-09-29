@@ -43,7 +43,7 @@ In furthering causal set theory it is crucial that we understand the kinematics 
 
 It is well known that the Einstein-Hilbert action is not the full story in the continuum. In the presence of spacetime boundaries the gravitational action must include a boundary term $S_{GHY}$, the Gibbons-Hawking-York action, in order to yield a well-defined variational principle~\cite{Gibbons_Hawking_Boundary}. The contributions of this term play an essential role in particular in the quantum theory. For instance, in the calculation of the black hole entropy via the Euclidean path-integral, it is the boundary terms that produce the answer $A/4l_p^2$ necessary for the unification of black hole mechanics with thermodynamics. To give another example, in Regge calculus boundary terms are necessary in order that the quantum mechanical amplitudes satisfy the correct composition law and that they have the correct classical limit~\cite{hartlesorkin}.\mb{is this true?}
 
-We define a \textit{causal set} (or \textit{causet}) as a locally finite partial order. This means it is a pair $ (\mathcal{C},\preceq)$ where $\mathcal{C}$ is the set of points and $\preceq$ is a partial order relation on $\mathcal{C}$ that has the following properties. It is (i) reflexive: $x\preceq x$, (ii) acyclic: $x\preceq y\preceq x \Rightarrow x=y$, and (iii) transitive: $x\preceq y\preceq z \Rightarrow x\preceq z$ for all points $x, y, z \in \mathcal{C}$. We define an inclusive order interval as the set $I (x,y)\equiv \lbrace z\in\mathcal{C}|x\preceq z\preceq y\rbrace$ for any $x, y\in\mathcal{C}$. The \textit{locally finite} condition is simply that the cardinality of any order interval is finite, that is $|I (x,y)|<\infty$. This condition ensures we are dealing with a discrete structure, as all the other properties of the relation would apply to an order relation between points on a continuous manifold.
+We define a \textit{causal set} (or \textit{causet}) as a locally finite partial order. This means it is a pair $ (\mathcal{C},\preceq)$ where $\mathcal{C}$ is the set of points and $\preceq$ is a partial order relation on $\mathcal{C}$ that has the following properties. It is (i) reflexive: $x\preceq x$, (ii) acyclic: $x\preceq y\preceq x \Rightarrow x=y$, and (iii) transitive: $x\preceq y\preceq z \Rightarrow x\preceq z$ for all points $x, y, z \in \mathcal{C}$. We define an inclusive order interval as the set $I (x,y)\equiv [ z\in\mathcal{C}|x\preceq z\preceq y]$ for any $x, y\in\mathcal{C}$. The \textit{locally finite} condition is simply that the cardinality of any order interval is finite, that is $|I (x,y)|<\infty$. This condition ensures we are dealing with a discrete structure, as all the other properties of the relation would apply to an order relation between points on a continuous manifold.
 
 In order to say we have a causal set analogue for a continuous expression we need a well defined procedure for relating the discrete theory to the continuum. This procedure, or tool, is called a \textit{Poisson sprinkling}, or just a \textit{sprinkling}. It is a Poisson process which provides a way to generate a causet from a $d$-dimensional Lorentzian manifold $ (M,g)$ by selecting certain points in $M$ to be the elements of $\mathcal{C}$, with an order relation given by the causal order of the manifold. The number of points chosen in a region of spacetime volume, $V$, is a Poisson random variable. This means that the expected number of points in some region will be $\rho V$, where $\rho$ is the density of the sprinkling. The density is related to the discreteness scale, $l$, by $\rho=l^{-d}$ in $d$ spacetime dimensions. It is called a sprinkling as one can envisage the point selection process as a `sprinkling' of points into the manifold. If a causet, $\mathcal{C}$, can be generated with relatively high probability by a sprinkling into the manifold, $ (M,g)$, then we say that the manifold is a good approximation for the causal set.
 
@@ -339,7 +339,7 @@ V_\blacktriangledown (-T,\mathbf x)
 \end{align}
 having dropped the subscript $p$. Given the volume expressions in GNCs we now proceed to evaluate the integrals for $\left\langle \BP{k}\right\rangle$ and $\left\langle \BF{k}\right\rangle$.
 
-\subsection{The mean of $\textbf{S}^{ (d)}_{GHY}[\mathcal {C}^-,\mathcal{C}^+;\vec{p},\vec{q}]$}
+\subsection{The mean of $\textbf{S}^{ (d)}_{GHY}\left[\mathcal {C}^-,\mathcal{C}^+;\vec{p},\vec{q}\,\right]$}
 
 Using the previous equations for the volumes of the truncated cones we find that~\eqref{eq:nmax_and_eq:nmin} reduces to
 \begin{gather}\label{eq:nmax_and_eq:nmin_volume_expanded}
@@ -394,10 +394,10 @@ The reason for expanding the exponentials is that the integrals will have to be 
 \begin{gather}\label{eq:n_min_different_rho_terms}
 \begin{aligned}
 \left\langle \BP{k}\right\rangle & = \frac{\rho^{k+1}A^k}{k!}\int_{\Sigma}d^{d-1}x\: h^{\frac{1}{2}}\int_{0}^{\varepsilon}dt\:
-\left\lbrace \left ( t^{dk} + \left (kB-K \right)t^{dk+1}\right) + O\left (t^{dk+2}\right) \right\rbrace e^{-\rho A\: t^d}
+\left[ \left ( t^{dk} + \left (kB-K \right)t^{dk+1}\right) + O\left (t^{dk+2}\right) \right] e^{-\rho A\: t^d}
  \\
  & - \frac{\rho^{k+2}A^{k+1}}{k!}\int_{\Sigma}d^{d-1}x\: h^{\frac{1}{2}}\int_{0}^{\varepsilon}dt\:
-\left\lbrace Bt^{dk+d+1} + O\left (t^{dk+d+2}\right) \right\rbrace e^{-\rho A\: t^d}
+\left[ Bt^{dk+d+1} + O\left (t^{dk+d+2}\right) \right] e^{-\rho A\: t^d}
 \end{aligned}
 \end{gather}
 To find out how this diverges in the limit of $\rho \rightarrow\infty$, it suffices to find the divergence of the following general expression
@@ -419,17 +419,17 @@ z^{\left (\frac{q+1}{d} \right)-1}e^{-z}=\lim_{\rho\rightarrow\infty}
 We can use this procedure to take the limit of~\eqref{eq:n_min_different_rho_terms} and formulate the answer in terms of gamma functions. The limits of both $\left\langle \BF{k}\right\rangle$ and $\left\langle \BP{k}\right\rangle$ are then given by
 \begin{gather}\label{eq:nmax_nmin_final}
 \begin{aligned}
-\lim_{\rho\rightarrow\infty}\left\langle \BF{k}\right\rangle = \lim_{\rho\rightarrow\infty} & \left\lbrace \rho^{1-\frac{1}{d}} \left (b_d\right)^{-1} \frac{\Gamma\left (\frac{1}{d}+k\right)}{k!}
+\lim_{\rho\rightarrow\infty}\left\langle \BF{k}\right\rangle = \lim_{\rho\rightarrow\infty} & \left[ \rho^{1-\frac{1}{d}} \left (b_d\right)^{-1} \frac{\Gamma\left (\frac{1}{d}+k\right)}{k!}
 \int_{\Sigma}d^{d-1}x\: \sqrt{h} \right.
  \\
  &  \left. +\rho^{1-\frac{2}{d}} \left (c_d\right)^{-1} \frac{\Gamma\left (\frac{2}{d}+k\right)}{k!}
-\int_{\Sigma}d^{d-1}x\: \sqrt{h}K + O\left (\rho^{1-\frac{3}{d}} \right) \right\rbrace
+\int_{\Sigma}d^{d-1}x\: \sqrt{h}K + O\left (\rho^{1-\frac{3}{d}} \right) \right]
 \\
-\lim_{\rho\rightarrow\infty}\left\langle \BP{k}\right\rangle = \lim_{\rho\rightarrow\infty} & \left\lbrace \rho^{1-\frac{1}{d}} \left (b_d\right)^{-1} \frac{\Gamma\left (\frac{1}{d}+k\right)}{k!}
+\lim_{\rho\rightarrow\infty}\left\langle \BP{k}\right\rangle = \lim_{\rho\rightarrow\infty} & \left[ \rho^{1-\frac{1}{d}} \left (b_d\right)^{-1} \frac{\Gamma\left (\frac{1}{d}+k\right)}{k!}
 \int_{\Sigma}d^{d-1}x\: \sqrt{h} \right.
  \\
  &  \left. -\rho^{1-\frac{2}{d}} \left (c_d\right)^{-1} \frac{\Gamma\left (\frac{2}{d}+k\right)}{k!}
-\int_{\Sigma}d^{d-1}x\: \sqrt{h}K + O\left (\rho^{1-\frac{3}{d}} \right) \right\rbrace
+\int_{\Sigma}d^{d-1}x\: \sqrt{h}K + O\left (\rho^{1-\frac{3}{d}} \right) \right]
 \\
 \end{aligned}
 \end{gather}
@@ -485,9 +485,12 @@ with
 \displaystyle
 - \frac{2}{\Gamma\left (1+\frac2d\right)}c_d ^{2/d}  \;   &d \, \,  \mathrm{even} \\
 \end{cases}
-\quad\text{and}\quad 
-%\end{equation}
-%\begin{equation}
+%\quad\text{and}\quad 
+\end{aligned}
+\end{equation}
+and
+\begin{equation}
+\begin{aligned}
 \beta_d =
 \begin{cases}\displaystyle
 \frac{d+1}{2^{d-1}\Gamma\left (1+\frac2d\right)} c_d^{2/d}   \;   &d\mathrm{ \, \, odd}\\ 
@@ -511,16 +514,16 @@ The coefficients $C_i^{ (d)}$ of the terms $N_i^{ (d)}$ in the sum are
 \label{cid}
  C_i^{ (d)}= 
 \begin{cases} 
-\displaystyle\sum_{k=0}^{i-1} (-1)^k\binom{i-1}{k} \frac{\Gamma\left (d/2 (k+1)+3/2\right)}{\Gamma\left (d/2+3/2\right) \Gamma\left (1+dk/2\right)}  \quad  &d\mathrm{ \, \, odd}\\ 
-\displaystyle\sum_{k=0}^{i-1} (-1)^k\binom{i-1}{k} \frac{\Gamma\left (d/2 (k+1)+2\right)}{\Gamma\left (d/2+2\right) \Gamma\left (1+dk/2\right)}  &d \mathrm{ \, \,  even.}\\ 
+\displaystyle\sum_{k=0}^{i-1} (-1)^k\binom{i-1}{k} \frac{\Gamma\left(\frac{d}2(k+1)+\frac32\right)}{\Gamma\left (\frac{d+3}{2}\right) \Gamma\left (1+\frac{d}2k\right)}  \quad  &d\mathrm{ \, \, odd}\\ 
+\displaystyle\sum_{k=0}^{i-1} (-1)^k\binom{i-1}{k} \frac{\Gamma\left (\frac{d}2 (k+1)+2\right)}{\Gamma\left (\frac{d}2+2\right) \Gamma\left (1+\frac{d}2k\right)}  &d \mathrm{ \, \,  even.}\\ 
 \end{cases} 
 \end{equation} 
 These coefficients can be expressed more compactly as hypergeometric functions 
 \begin{equation}
-C_i^d={}_{q+1}F_{q} (\{ a_1, \ldots a_q, i-1\}, \{b_1, \ldots b_q \} |1)
+C_i^{(d)}={}_{q+1}F_{q} (\{ a_1, \ldots, a_q, i-1\}, \{b_1, \ldots b_q \} |1)
 \label{chyp} 
 \end{equation} 
-with $q=d/2+1/2, a_i=\frac{d+2i}{d}, b_i=2i/d$ for $d$ odd and $q=d/2, a_i=\frac{d+2i+2}{d}, b_i=2i/d$  for $d$ even.  
+with $q=\frac{d+1}{2}$, $a_i=\frac{d+2i}{d}$, $b_i=\frac{2i}{d}$ for $d$ odd and $q=\frac{d}{2}$, $a_i=\frac{d+2i+2}{d}$, and $b_i=\frac{2i}{d}$  for $d$ even.  
 
 
 If $S_{BD}^{ (d)}$ were precisely the discrete analog of the Einstein Hilbert action {\it without} any boundary contributions, then in flat spacetime  $S_{BD}^{ (d)}$ should  vanish. However, as shown explicitly in \cite{bbdtwo} this is not the case for Alexandrov intervals in $d=2$  flat spacetime. Indeed, there is a residual contribution that goes to a non-vanishing constant in the continuum limit $N\rightarrow \infty$.  When the action is evaluated in rectangular regions in the same spacetime or for Alexandrov intervals in  the flat trousers spacetime, this is no longer the case. Thus, it seems plausible that the $d=2$ BD action contains boundary information. Moreover, in the case of Alexandrov intervals the asymptotic value of the action is the same  irrespective of the interval size. While this might suggest a  topological origin, we will now show that it is a part of a more general  result for $d>2$ and  has a geometrical origin. Namely it corresponds to the volume  $\vol (S^{d-2})$ of the $S^{d-2}$ joint which is independent of the interval size {\it only} in $d=2$.   
@@ -529,11 +532,11 @@ Consider an Alexandrov interval $I (p,q)=I^+ (p) \cap I^- (q)$ for two events $p
 %% If $p$ or $q$ were to be taken to time-like past or future infinity, this volume would go to infinity as expected.
 
 In \cite{Glaser_Sumati:Locality_in_Causal_Set} a closed form expression was obtained for the mean value of the number of $i+1$ element inclusive intervals $N_i^{(d)}$ contained in an Alexandrov interval in $d$ dimensional flat spacetime 
-\begin{equation} N_i^{ (d)}= \frac{\Gamma\left (d\right)^2 N^{i+2}}{\Gamma\left (i\right)} \sum_{k=0}^\infty \frac{ (-N)^k\,\Gamma\left (\frac{d (k+i)}{2}+1\right)  \Gamma\left (\frac{d (k+i+1)}{2}+1\right)}{ (k+i+2)  (k+i+1) \Gamma\left (k+1\right)\Gamma\left (\frac{d (k+i)}{2} +d\right) \Gamma\left (\frac{d (k+i+1)}{2}+d\right)},\nonumber
+\begin{equation} N_i^{ (d)}= \frac{\Gamma\left (d\right)^2 N^{i+2}}{\Gamma\left (i\right)} \sum_{k=0}^\infty \frac{ (-N)^k\,\Gamma\left (\frac{d}2 (k+i)+1\right)  \Gamma\left (\frac{d}2 (k+i+1)+1\right)}{ (k+i+2)  (k+i+1) \Gamma\left (k+1\right)\Gamma\left (\frac{d}2 (k+i) +d\right) \Gamma\left (\frac{d}2 (k+i+1)+d\right)},\nonumber
 \end{equation} 
 where $i \geq 1$.  We use this to expand the sum in (\ref{bd}) as a power series in $N$: $\sum_{i=1}^{n_d}C_i^{ (d)} N_i^{ (d)} = \sum_{j=1}^\infty A_j^{ (d)}  N^{j+1}$.  After a rearrangement and redefinition of indices we find that 
 \begin{equation}
- A_j^{ (d)} = \Gamma\left (d\right)^2\left ( \sum_{i=1}^{D+2} (-1)^i \binom{j-1}{i-1}  C_i^{ (d)}  \right) \frac{ (-1)^j}{ (j+1)!}\frac{\Gamma\left (\frac{d}{2} (j-1)+1\right)\Gamma\left (\frac{d}{2}j+1\right)}{\Gamma\left (\frac{d}{2} (j-1)+d\right) \Gamma\left (\frac{d}{2}j+d\right)}, 
+ A_j^{ (d)} = \Gamma\left (d\right)^2\frac{ (-1)^j}{ (j+1)!}\frac{\Gamma\left (\frac{d}{2} (j-1)+1\right)\Gamma\left (\frac{d}{2}j+1\right)}{\Gamma\left (\frac{d}{2} (j-1)+d\right) \Gamma\left (\frac{d}{2}j+d\right)}\sum_{i=1}^{D+2} (-1)^i \binom{j-1}{i-1}  C_i^{ (d)}, 
 \end{equation} 
 where $d=2D$ for $d$ even and $d=2D+1$ for $d$ odd.   
 % Using the abbreviated form $C_i^d=\sum_{l=0}^{i-1} \binom{i-1}{l}A (d,l)$ where $A (d,l)$ is defined using \ref{cid} 
@@ -556,7 +559,7 @@ where $d=2D$ for $d$ even and $d=2D+1$ for $d$ odd.
 % \end{equation} 
 This can be simplified to 
 \begin{equation}
-A_j^d= \gamma_j^{ (d)}   \frac{\Gamma\left (d\right)^2 (-1)^{j+1}}{\Gamma\left (\frac{d}{2} (j + 1)\right) \Gamma\left (\frac{d}{2} (2 + j)\right) \Gamma\left (2 + j\right) }
+A_j^{(d)}= \gamma_j^{ (d)}   \frac{\Gamma\left (d\right)^2 (-1)^{j+1}}{\Gamma\left (\frac{d}{2} (j + 1)\right) \Gamma\left (\frac{d}{2} (2 + j)\right) \Gamma\left (2 + j\right) }
 \label{simplercoefft} 
 \end{equation} 
 where 
