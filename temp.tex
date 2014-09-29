@@ -103,7 +103,7 @@ where the constant $c_{d}$ only depends on the spacetime dimension and is given 
 \be\label{Cn}
 c_{d}=\frac{d (d+1)}{ (d+2)}\left[\frac{V_{d-1}}{d}\right]^{\frac{2}{d}},
 \ee
-and where $V_d=\pi^{\frac{d}{2}}/\Gamma\left (\frac{d}{2}+1\right)$ denotes the volume of the unit $d$-ball ($\Gamma (t)$ is a gamma function, defined as $\Gamma (t):=\int_0^\infty dx\: x^{t-1}\: e^{-x}$). We have used $\vec{p}$ and $\vec{q}$ to stand for infinite dimensional vectors $ (p_0,...,p_m,..)$ and $ (q_0,...,q_n,..)$ respectively, where all the $p_m,\: q_n \in \mathbb{R}$. These vectors contain a finite number of non-zero entries, corresponding to the coefficients of the different $N_{{max\vphantom{i}}}^{\: (m)}$ and $N_{{min}}^{\: (n)}$ terms. We use the summation $\sum_m$ ($\sum_n$) to denote a sum that runs from $0$ to $m_{max}$ ($n_{max}$), where $m_{max}$ ($n_{max}$) is some integer, the value of which depends on the causet $\mathcal{C}^-$ ($\mathcal{C}^+$), for which all $\F{m}\left[\mathcal{C}^- \right]=0$ ($\P{m}\left[\mathcal{C}^+ \right]=0$) for any $m>m_{max}$ ($n>n_{max}$). A finite value for $m_{max}$ ($n_{max}$) will always exist for any finite causet, as it will not be large enough or be structured in such a way to have any $\F{m}$ ($\P{n}$) elements for $m>m_{max}$ ($n>n_{max}$). The vectors must be chosen such that they satisfy the following conditions.
+and where $V_d=\pi^{\frac{d}{2}}/\Gamma\left (\frac{d}{2}+1\right)$ denotes the volume of the unit $d$-ball ($\Gamma (t)$ is a gamma function, defined as $\Gamma (t):=\int_0^\infty dx\: x^{t-1}\: e^{-x}$). We have used $\vec{p}$ and $\vec{q}$ to stand for infinite dimensional vectors $ (p_0,...,p_m,..)$ and $ (q_0,...,q_n,..)$ respectively, where all the $p_m,\: q_n \in \mathbb{R}$. These vectors contain a finite number of non-zero entries, corresponding to the coefficients of the different $N_{{max\vphantom{i}}}^{\: (m)}$ and $N_{{min}}^{\: (n)}$ terms. We use the summation $\sum_m$ ($\sum_n$) to denote a sum that runs from $0$ to $m_{max}$ ($n_{max}$), where $m_{max}$ ($n_{max}$) is some integer, the value of which depends on the causet $\mathcal{C}^-$ ($\mathcal{C}^+$), for which all $\F{m}\left[\mathcal{C}^- \right]=0$ ($\P{m}\left[\mathcal{C}^+ \right]=0$) for any $m>m_{max}$ ($n>n_{max}$). A finite value for $m_{max}$ ($n_{max}$) will always exist for any finite causet, as it will not be large enough or be structured in such a way to have any $m$-next-to-maximal ($n$-next-to-minimal) elements for $m>m_{max}$ ($n>n_{max}$). The vectors must be chosen such that they satisfy the following conditions.
 \begin{align}\label{coefficient_relation1}
 & \sum_m p_m \frac{\Gamma\left (\frac{1}{d}+m \right)}{m!}  + \sum_n q_n\frac{\Gamma\left (\frac{1}{d}+n \right)}{n!}=0
 \\
@@ -121,17 +121,17 @@ There is a huge amount of freedom that remains in the choice of $\vec{p}$ and $\
 
 There are a few, two-term, members of the family that are worth mentioning, as they have simple forms that make them good candidates for computations. Given a causet, $\mathcal{C}$, with a spacelike partition so that $\mathcal C = \mathcal C^+ \cup\, \mathcal C^-$, we define the function $S^{ (d)}_0$ as a particular member of the family in~\eqref{general_boundary_sum}:
 \be\label{eq:min_max_simple_formula}
-S^{ (d)}_{0}\left[\mathcal{C}^-,\mathcal{C}^+\right]:=S^{ (d)}_{GHY}\left[\mathcal{C}^-,\mathcal{C}^+;\vec{p}, -\vec{p} \right]=\left (l/l_p\right)^{d-2}\frac{c_{d}}{2\Gamma\left (\frac{2}{d} \right)}\left ( \F{0}\left[\mathcal{C}^- \right] - \P{0}\left[\mathcal{C}^+ \right] \right)
+S^{ (d)}_{0}\left[\mathcal{C}^-,\mathcal{C}^+\right]:=S^{ (d)}_{GHY}\left[\mathcal{C}^-,\mathcal{C}^+;\vec{p}, -\vec{p} \right]=\left (l/l_p\right)^{d-2}\frac{c_{d}}{2\Gamma\left (\frac{2}{d} \right)}\left ( N_{\vphantom{i}max}^{\: (0)}\left[\mathcal{C}^- \right] - N_{min}^{\: (0)}\left[\mathcal{C}^+ \right] \right)
 \ee
 where $\vec{p}=\left (\left (2\Gamma\left (\frac{2}{d} \right)\right)^{-1},0,0,...\right)$.
 This expression is the easiest to employ computationally, and we shall use its random variable counterpart, $\textbf{S}^{ (d)}_{0}\left[M^-,M^+,\rho\right]:=\textbf{S}^{ (d)}_{GHY}\left[M^-,M^+,\rho;\vec{p}, -\vec{p} \right]$, later when we study the fluctuations of the discrete boundary actions numerically.
 
 If one wants to calculate the GHY boundary term for the future (past) boundary of a single causet, $\mathcal{C}$, then one simply inserts $\mathcal{C}$ into the $\mathcal{C}^-$ ($\mathcal{C}^+$) argument of $S^{ (d)}_{GHY}$ and sets $\vec{q}$ ($\vec{p}$) to the zero vector, $\mathbf{0}= (0,0,...)$. This renders the $\mathcal{C}^+$ ($\mathcal{C}^-$) argument unnecessary and so one can insert the empty set, $\emptyset$, for convenience. We define the functions for the future and past boundaries respectively as:
 \begin{align}\label{eq:future_past_boundary_terms1}
-S^{ (d)}_{+}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\mathcal{C},\emptyset;\vec{p},\mathbf{0}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( d\:\F{1}\left[\mathcal{C} \right] - \F{0}\left[\mathcal{C} \right] \right)
+S^{ (d)}_{+}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\mathcal{C},\emptyset;\vec{p},\mathbf{0}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( d\:N_{\vphantom{i}max}^{\: (1)}\left[\mathcal{C} \right] - N_{\vphantom{i}max}^{\: (0)}\left[\mathcal{C} \right] \right)
 \\
 \label{eq:future_past_boundary_terms2}
-S^{ (d)}_{-}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\emptyset,\mathcal{C};\mathbf{0},-\vec{p}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( \P{0}\left[\mathcal{C} \right] - d\: \P{1}\left[\mathcal{C} \right] \right)
+S^{ (d)}_{-}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\emptyset,\mathcal{C};\mathbf{0},-\vec{p}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( N_{min}^{\: (0)}\left[\mathcal{C} \right] - d\: N_{min}^{\: (1)}\left[\mathcal{C} \right] \right)
 \end{align}
 where $\vec{p}=\left (-\Gamma\left (\frac{2}{d} \right)^{-1},d\:\Gamma\left (\frac{2}{d} \right)^{-1},0,0,...\right)$. In writing down an action for a particular causal set, $\mathcal{C}$, one would write down the Benincasa-Dowker action, $S^{ (d)}_{BD}[\mathcal{C}]$. To complete the story we propose that one must include the boundary terms $S^{ (d)}_{+}[\mathcal{C}]$ and $S^{ (d)}_{-}[\mathcal{C}]$. Explicitly, the total action for a causal set should be given by:
 \be\label{eq:total_causet_action}
@@ -141,7 +141,7 @@ where we have omitted the causet argument, $\mathcal{C}$. There may be contribut
 
 We also propose a family of functions for the causal set analogue of spatial volume of the spacelike partition:
 \be\label{general_area_sum}
-A^{ (d)}[\mathcal{C}^-,\mathcal{C}^+;\vec{p},\vec{q}]=\left (l/l_p\right)^{d-1}b_{d}\left (\sum_m p_m \F{m}\left[\mathcal{C}^- \right] + \sum_n q_n \P{n}\left[\mathcal{C}^+ \right]\right)
+A^{ (d)}[\mathcal{C}^-,\mathcal{C}^+;\vec{p},\vec{q}]=\left (l/l_p\right)^{d-1}b_{d}\left (\sum_m p_m N_{\vphantom{i}max}^{\: (m)}\left[\mathcal{C}^- \right] + \sum_n q_n N_{min}^{\: (n)}\left[\mathcal{C}^+ \right]\right)
 \ee
 where the constant $b_d$ is given by
 \be\label{constant_b_d}
@@ -159,9 +159,9 @@ where the right hand side is the spatial volume of the surface $\Sigma$. In prov
 
 By making the same restrictions on the arguments as we did for $S^{ (d)}_{GHY}$, we can find expressions for the causal set analogue of the spatial volume of the future or past boundaries. We define functions for the future and past boundaries respectively as two of the simplest members of the family:
 \begin{align}\label{eq:future_past_spatial_volume}
-A^{ (d)}_{+}[\mathcal{C}]:=A^{ (d)}[\mathcal{C},\emptyset;\vec{p},\mathbf{0}]= & \left (l/l_p\right)^{d-1}\frac{b_{d}}{\Gamma\left (\frac{1}{d}\right)}\: \F{0}[\mathcal{C}]
+A^{ (d)}_{+}[\mathcal{C}]:=A^{ (d)}[\mathcal{C},\emptyset;\vec{p},\mathbf{0}]= & \left (l/l_p\right)^{d-1}\frac{b_{d}}{\Gamma\left (\frac{1}{d}\right)}\: N_{\vphantom{i}max}^{\: (0)}[\mathcal{C}]
 \\
-A^{ (d)}_{-}[\mathcal{C}]:=A^{ (d)}[\emptyset,\mathcal{C};\mathbf{0},\vec{p}]= & \left (l/l_p\right)^{d-1}\frac{b_{d}}{\Gamma\left (\frac{1}{d}\right)}\: \P{0}[\mathcal{C}]
+A^{ (d)}_{-}[\mathcal{C}]:=A^{ (d)}[\emptyset,\mathcal{C};\mathbf{0},\vec{p}]= & \left (l/l_p\right)^{d-1}\frac{b_{d}}{\Gamma\left (\frac{1}{d}\right)}\: N_{min}^{\: (0)}[\mathcal{C}]
 \end{align}
 where $\vec{p}= (\Gamma\left (\frac{1}{d}\right)^{-1},0,0,...)$.
 
@@ -175,25 +175,25 @@ where $\vec{p}= (\Gamma\left (\frac{1}{d}\right)^{-1},0,0,...)$.
 
 \section{The Proof}
 
-\subsection{Poisson Sprinklings for $\left\langle \BF{m}\right\rangle$ and $\left\langle \BP{m}\right\rangle$}
+\subsection{Poisson Sprinklings for $\left\langle \textbf{N}_{max}^{\: (m)}\right\rangle$ and $\left\langle \textbf{N}_{min}^{\: (n)}\right\rangle$}
 
-In order to prove~\eqref{eq:mainconjecture} and~\eqref{eq:conjecture_for_area} let us first derive expressions for the mean values of $\BF{m}$ and $\BP{m}$. The proof will will follow almost automatically, as~\eqref{general_boundary_sum} and~\eqref{general_area_sum} are just linear combination of $\F{m}$ and $\P{m}$ terms, and thus the mean values of their random variable counterparts will just be linear combinations of $\left\langle \BF{m}\right\rangle$ and $\left\langle \BP{m}\right\rangle$ terms.
+In order to prove~\eqref{eq:mainconjecture} and~\eqref{eq:conjecture_for_area} let us first derive expressions for the mean values of $\textbf{N}_{\vphantom{i}max}^{\: (m)}$ and $\textbf{N}_{min}^{ (n)}$. The proof will will follow almost automatically, as~\eqref{general_boundary_sum} and~\eqref{general_area_sum} are just linear combination of $N_{max}^{\: (m)}$ and $\P{m}$ terms, and thus the mean values of their random variable counterparts will just be linear combinations of $\left\langle \textbf{N}_{\vphantom{i}max}^{\: (m)}\right\rangle$ and $\left\langle \textbf{N}_{min}^{\: (n)}\right\rangle$ terms.
 
-For any instance of the sprinkling, the probability that a sprinkled point $p\in M$ below the surface $\Sigma$ is $F_k$ is given by the probability that $k$ points of the sprinkling lie in the region $J^{+} (p)\cap J^{-} (\Sigma)$, the intersection of the causal future of $p$ with the causal past of the surface $\Sigma$.\footnote{For notational convenience we use the symbol $x$ to refer to the causal element $x\in\mathcal C$, to its embedding in the manifold $M$, and to its coordinates in some chart on $M$.} This region will in general be the interior of some curvy $d$-dimensional cone truncated by the surface $\Sigma$, as illustrated in Figure~\ref{fig:Nmin_Nmax}. We will refer to these regions as \emph{truncated cones}. The Poisson process assigns a probability
+For any instance of the sprinkling, the probability that a sprinkled point $p\in M$ below the surface $\Sigma$ is $k$\emph{-next-to-maximal} is given by the probability that $k$ points of the sprinkling lie in the region $J^{+} (p)\cap J^{-} (\Sigma)$, the intersection of the causal future of $p$ with the causal past of the surface $\Sigma$.\footnote{For notational convenience we use the symbol $x$ to refer to the causal element $x\in\mathcal C$, to its embedding in the manifold $M$, and to its coordinates in some chart on $M$.} This region will in general be the interior of some curvy $d$-dimensional cone truncated by the surface $\Sigma$, as illustrated in Figure~\ref{fig:Nmin_Nmax}. We will refer to these regions as \emph{truncated cones}. The Poisson process assigns a probability
 \be\label{Poisson}
 \mathbb P\left (\text{k points in }J^{+} (p)\cap J^{-} (\Sigma)\right)=\frac{\left (\rho\: V_\blacktriangledown (p)\right)^k}{k!}e^{-\rho V_\blacktriangledown (p)}
 \ee
-to this event, where $V_\blacktriangledown (p)\equiv V (J^{+} (p)\cap J^{-} (\Sigma))$ is the spacetime volume of the region $J^{+} (p)\cap J^{-} (\Sigma)$. The probability of sprinkling an element into an infinitesimal four-volume $dV_p$ at $p$ is $\rho dV_p$ where $\rho=l^{-d}$ is the sprinkling density, and so the total expected number of $\F{k}$ elements below $\Sigma$ is
+to this event, where $V_\blacktriangledown (p)\equiv V (J^{+} (p)\cap J^{-} (\Sigma))$ is the spacetime volume of the region $J^{+} (p)\cap J^{-} (\Sigma)$. The probability of sprinkling an element into an infinitesimal four-volume $dV_p$ at $p$ is $\rho dV_p$ where $\rho=l^{-d}$ is the sprinkling density, and so the total expected number of $k$-next-to-maximal elements below $\Sigma$ is
 \be\label{eq:nmax}
-\left\langle \BF{k}\right\rangle =\rho\int_{J^{-} (\Sigma)}dV_p\; \frac{\left (\rho\: V_\blacktriangledown (p)\right)^k}{k!}e^{-\rho V_\blacktriangledown (p)}
+\left\langle \textbf{N}_{max}^{ (k)}\right\rangle =\rho\int_{J^{-} (\Sigma)}dV_p\; \frac{\left (\rho\: V_\blacktriangledown (p)\right)^k}{k!}e^{-\rho V_\blacktriangledown (p)}
 \ee
-Similarly the expected number of $\P{k}$ elements above $\Sigma$ is
+Similarly the expected number of $k$-next-to-minimal elements above $\Sigma$ is
 \be\label{eq:nmin}
-\left\langle \BP{k}\right\rangle =\rho\int_{J^{+} (\Sigma)}dV_p\; \frac{\left (\rho\: V_\blacktriangle (p)\right)^k}{k!}e^{-\rho V_\blacktriangle (p)}
+\left\langle \textbf{N}_{min}^{ (k)}\right\rangle =\rho\int_{J^{+} (\Sigma)}dV_p\; \frac{\left (\rho\: V_\blacktriangle (p)\right)^k}{k!}e^{-\rho V_\blacktriangle (p)}
 \ee
 where $V_\blacktriangle (p)\equiv V (J^{+} (\Sigma)\cap J^{-} (p))$.
 
-In the limit $\rho\rightarrow\infty$, both quantities will diverge, but if some combination of $\P{k}$ and $\F{k}$ grows slower than or at order $\rho^{1-\frac2d}$, the random variable counterpart of the proposed action~\eqref{general_boundary_sum} will tend to a finite value in the continuum limit.
+In the limit $\rho\rightarrow\infty$, both quantities will diverge, but if some combination of $k$-next-to-maximal/minimal terms grows slower than or at order $\rho^{1-\frac2d}$, the random variable counterpart of the proposed action~\eqref{general_boundary_sum} will tend to a finite value in the continuum limit.
 
 Consider a set of synchronous or Gaussian Normal Coordinates (GNC) $x^\mu= (t,\mathbf x)$ adapted to $\Sigma$ such that in a neighbourhood $U_\Sigma$ of $\Sigma$ the line element is
 \be
@@ -212,12 +212,12 @@ In these coordinates, the surface $\Sigma$ corresponds to $t=0$, and the coordin
 The integrals~\eqref{eq:nmax} and ~\eqref{eq:nmin} seem intractable as they stand, since the integration is over the entire causal past/future of the surface and the volume expressions will be complicated in the presence of curvature. However, for large $\rho$ (small $l$), the integrands $\exp (-\rho V)$ will be exponentially suppressed unless the volumes are small. Consider the spacetime region $U_\varepsilon=\left\{|t|<\varepsilon\right\}$ around the surface $\Sigma$ for some $\varepsilon>0$ (with $\varepsilon$ small enough such that the GNC system is valid throughout $U_\varepsilon$). We will assume that for any such $\varepsilon$, the contribution from points with $|t|>\varepsilon$ to the integrals~\eqref{eq:nmax} and \eqref{eq:nmin} can be made arbitrarily small by setting $\rho$ large enough, since the volumes of the truncated past/future lightcones for such points will be too large. Hence, as $\rho\rightarrow\infty$, the integration ranges in \eqref{eq:nmax} and \eqref{eq:nmin} can be cut off at finite time $t=\pm\varepsilon$ with $\varepsilon$ arbitrarily small, which allows us to expand the time integration-variable about zero. These assumptions of course impose certain regularity conditions on the surface $\Sigma$, but so long as $\Sigma$ is compact and everywhere spacelike  then these conditions are satisfied.\mb{do we need to say more about this? e.g. can't have asymp. null $\Sigma$ i guess} The integrals then simplify to
 \begin{gather}\label{eq:nmax_and_eq:nmin}
 \begin{aligned}
-\left\langle \BF{k}\right\rangle & =\rho \int_{\Sigma}d^{d-1}x\int_{-\varepsilon}^{0}dt\:
+\left\langle \textbf{N}_{max}^{ (k)}\right\rangle & =\rho \int_{\Sigma}d^{d-1}x\int_{-\varepsilon}^{0}dt\:
 h^{\frac{1}{2}}\left (1+
 \frac{1}{2}\frac{\dot{h}}{h}t+O (t^2)\right)
  \frac{\left (\rho\: V_\blacktriangledown (p)\right)^k}{k!} e^{-\rho V_\blacktriangledown (t,\mathbf x)}
 \\
-\left\langle \BP{k}\right\rangle & =\rho \int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
+\left\langle \textbf{N}_{min}^{ (k)}\right\rangle & =\rho \int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
 h^{\frac{1}{2}}\left (1+
 \frac{1}{2}\frac{\dot{h}}{h}t+O (t^2)\right) \frac{\left (\rho\: V_\blacktriangle (p)\right)^k}{k!} e^{-\rho V_\blacktriangle (t,\mathbf x)}
 \end{aligned}
@@ -337,14 +337,14 @@ V_\blacktriangledown (-T,\mathbf x)
 &=\frac{V_{d-1}}{d}T^d\left (1-\frac{d}{2 (d+1)}K (0,\mathbf{x})T\right)
 +O (T^{d+2}), \label{eq:BottomVolumeWithK}
 \end{align}
-having dropped the subscript $p$. Given the volume expressions in GNCs we now proceed to evaluate the integrals for $\left\langle \BP{k}\right\rangle$ and $\left\langle \BF{k}\right\rangle$.
+having dropped the subscript $p$. Given the volume expressions in GNCs we now proceed to evaluate the integrals for $\left\langle \textbf{N}_{min}^{ (k)}\right\rangle$ and $\left\langle \textbf{N}_{max}^{ (k)}\right\rangle$.
 
 \subsection{The mean of $\textbf{S}^{ (d)}_{GHY}[\mathcal {C}^-,\mathcal{C}^+;\vec{p},\vec{q}]$}
 
 Using the previous equations for the volumes of the truncated cones we find that~\eqref{eq:nmax_and_eq:nmin} reduces to
 \begin{gather}\label{eq:nmax_and_eq:nmin_volume_expanded}
 \begin{aligned}
-\left\langle \BF{k}\right\rangle = \frac{\rho^{k+1}}{k!} & \int_{\Sigma}d^{d-1}x\int_{-\varepsilon}^{0}dt\:
+\left\langle \textbf{N}_{max}^{ (k)}\right\rangle = \frac{\rho^{k+1}}{k!} & \int_{\Sigma}d^{d-1}x\int_{-\varepsilon}^{0}dt\:
 h^{\frac{1}{2}}\left (1+
 \frac{1}{2}\frac{\dot{h}}{h}t\right)
  \\
@@ -352,7 +352,7 @@ h^{\frac{1}{2}}\left (1+
  \Big ( 1 - B (-t) \Big)^k
  e^{-\rho A (-t)^d \left[1-B (-t) \right]} + .\,.\,.
 \\
-\left\langle \BP{k}\right\rangle = \frac{\rho^{k+1}}{k!} & \int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
+\left\langle \textbf{N}_{min}^{ (k)}\right\rangle = \frac{\rho^{k+1}}{k!} & \int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
 h^{\frac{1}{2}}\left (1+
 \frac{1}{2}\frac{\dot{h}}{h}t\right)
  \\
@@ -371,7 +371,7 @@ B & := \frac{V_{d-1}}{2 (d+1)}K (0,\mathbf{x})
 Once again the higher order terms that have been ignored in both equations will be shown to vanish in the limit. From~\eqref{eq:K} we can substitute $K$ in for $\frac{1}{2}\frac{\dot{h}}{h}t$. We swap the integration variable to $t\rightarrow -t$ in the first equation and expand the $O (t^{d+1})$ part of the exponentials to give
 \begin{gather}\label{eq:nmax_and_eq:nmin_volume_expo_expanded}
 \begin{aligned}
-\left\langle \BF{k}\right\rangle = \frac{\rho^{k+1}}{k!} & \int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
+\left\langle \textbf{N}_{max}^{ (k)}\right\rangle = \frac{\rho^{k+1}}{k!} & \int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
 h^{\frac{1}{2}}\left (1+
 K\: t\right)
  \\
@@ -380,7 +380,7 @@ K\: t\right)
  \Big ( 1 + \rho A B\: t^{d+1} \Big)
  e^{-\rho A\: t^d} + .\,.\,.
 \\
-\left\langle \BP{k}\right\rangle = \frac{\rho^{k+1}}{k!} & \int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
+\left\langle \textbf{N}_{min}^{ (k)}\right\rangle = \frac{\rho^{k+1}}{k!} & \int_{\Sigma}d^{d-1}x\int_{0}^{\varepsilon}dt\:
 h^{\frac{1}{2}}\left (1-
 Kt\right)
  \\
@@ -390,10 +390,10 @@ Kt\right)
  e^{-\rho A\: t^d} + .\,.\,.
 \end{aligned}
 \end{gather}
-The reason for expanding the exponentials is that the integrals will have to be put into the form of Gaussian integrals in order to evaluate them in the limit $\rho\rightarrow\infty$. The above expressions are almost the same apart from a few sign differences, so from now on we will just work with the expression for $\left\langle \BP{k}\right\rangle$. By expanding the brackets, and retaining only necessary orders, the integral can be split into two parts of differing powers of $\rho$.
+The reason for expanding the exponentials is that the integrals will have to be put into the form of Gaussian integrals in order to evaluate them in the limit $\rho\rightarrow\infty$. The above expressions are almost the same apart from a few sign differences, so from now on we will just work with the expression for $\left\langle \textbf{N}_{min}^{ (k)}\right\rangle$. By expanding the brackets, and retaining only necessary orders, the integral can be split into two parts of differing powers of $\rho$.
 \begin{gather}\label{eq:n_min_different_rho_terms}
 \begin{aligned}
-\left\langle \BP{k}\right\rangle & = \frac{\rho^{k+1}A^k}{k!}\int_{\Sigma}d^{d-1}x\: h^{\frac{1}{2}}\int_{0}^{\varepsilon}dt\:
+\left\langle \textbf{N}_{min}^{ (k)}\right\rangle & = \frac{\rho^{k+1}A^k}{k!}\int_{\Sigma}d^{d-1}x\: h^{\frac{1}{2}}\int_{0}^{\varepsilon}dt\:
 \left\lbrace \left ( t^{dk} + \left (kB-K \right)t^{dk+1}\right) + O\left (t^{dk+2}\right) \right\rbrace e^{-\rho A\: t^d}
  \\
  & - \frac{\rho^{k+2}A^{k+1}}{k!}\int_{\Sigma}d^{d-1}x\: h^{\frac{1}{2}}\int_{0}^{\varepsilon}dt\:
@@ -416,16 +416,16 @@ The pre-factor has come from the substitution. In the limit we can retain the $\
 z^{\left (\frac{q+1}{d} \right)-1}e^{-z}=\lim_{\rho\rightarrow\infty}
 \frac{A^{-\left (\frac{q+1}{d} \right)}}{d}\rho^{p-\left (\frac{q+1}{d} \right)}\Gamma\left ( \frac{q+1}{d} \right)
 \ee
-We can use this procedure to take the limit of~\eqref{eq:n_min_different_rho_terms} and formulate the answer in terms of gamma functions. The limits of both $\left\langle \BF{k}\right\rangle$ and $\left\langle \BP{k}\right\rangle$ are then given by
+We can use this procedure to take the limit of~\eqref{eq:n_min_different_rho_terms} and formulate the answer in terms of gamma functions. The limits of both $\left\langle \textbf{N}_{max}^{ (k)}\right\rangle$ and $\left\langle \textbf{N}_{min}^{ (k)}\right\rangle$ are then given by
 \begin{gather}\label{eq:nmax_nmin_final}
 \begin{aligned}
-\lim_{\rho\rightarrow\infty}\left\langle \BF{k}\right\rangle = \lim_{\rho\rightarrow\infty} & \left\lbrace \rho^{1-\frac{1}{d}} \left (b_d\right)^{-1} \frac{\Gamma\left (\frac{1}{d}+k\right)}{k!}
+\lim_{\rho\rightarrow\infty}\left\langle \textbf{N}_{max}^{ (k)}\right\rangle = \lim_{\rho\rightarrow\infty} & \left\lbrace \rho^{1-\frac{1}{d}} \left (b_d\right)^{-1} \frac{\Gamma\left (\frac{1}{d}+k\right)}{k!}
 \int_{\Sigma}d^{d-1}x\: \sqrt{h} \right.
  \\
  &  \left. +\rho^{1-\frac{2}{d}} \left (c_d\right)^{-1} \frac{\Gamma\left (\frac{2}{d}+k\right)}{k!}
 \int_{\Sigma}d^{d-1}x\: \sqrt{h}K + O\left (\rho^{1-\frac{3}{d}} \right) \right\rbrace
 \\
-\lim_{\rho\rightarrow\infty}\left\langle \BP{k}\right\rangle = \lim_{\rho\rightarrow\infty} & \left\lbrace \rho^{1-\frac{1}{d}} \left (b_d\right)^{-1} \frac{\Gamma\left (\frac{1}{d}+k\right)}{k!}
+\lim_{\rho\rightarrow\infty}\left\langle \textbf{N}_{min}^{ (k)}\right\rangle = \lim_{\rho\rightarrow\infty} & \left\lbrace \rho^{1-\frac{1}{d}} \left (b_d\right)^{-1} \frac{\Gamma\left (\frac{1}{d}+k\right)}{k!}
 \int_{\Sigma}d^{d-1}x\: \sqrt{h} \right.
  \\
  &  \left. -\rho^{1-\frac{2}{d}} \left (c_d\right)^{-1} \frac{\Gamma\left (\frac{2}{d}+k\right)}{k!}
@@ -438,12 +438,12 @@ These objects diverge as $\rho^{1-\frac{1}{d}}$ in the limit. The factor of $\rh
 
 If we take the mean of $\textbf{S}^{ (d)}_{GHY}$ and the limit $\rho\rightarrow\infty$, we can substitute in the above expressions to find that the only terms left that have non-negative powers of $\rho$ (and therefore non-vanishing in the limit) are that of the spatial volume and boundary term. The term proportional to the spatial volume is divergent, so the coefficients, $\vec{p}$ and $\vec{q}$, must satisfy~\eqref{coefficient_relation1} to make this term vanish. The other condition,~\eqref{coefficient_relation2}, ensures that what remains is equal to the GHY boundary term. Thus, the proof of~\eqref{eq:mainconjecture} is complete.
 
-The form of~\eqref{eq:nmax_nmin_final} seems to suggest general series expansions of $\left\langle \BF{k}\right\rangle$ and $\left\langle \BP{k}\right\rangle$ in reducing powers of $\rho$. Written in terms of the discreteness scale, $l$, it is a Laurent series starting at $l^{1-d}$. The higher order terms, in $l$, will possibly be proportional to higher order normal derivatives of the surface volume. If this were true then one could find causal set versions for normal derivatives of the surface volume to any order. The exact form of the constant in the next term of the series is unknown and more work must be done to determine a general trend for the constants, and hence find the general series.
+The form of~\eqref{eq:nmax_nmin_final} seems to suggest general series expansions of $\left\langle \textbf{N}_{max}^{ (k)}\right\rangle$ and $\left\langle \textbf{N}_{min}^{ (k)}\right\rangle$ in reducing powers of $\rho$. Written in terms of the discreteness scale, $l$, it is a Laurent series starting at $l^{1-d}$. The higher order terms, in $l$, will possibly be proportional to higher order normal derivatives of the surface volume. If this were true then one could find causal set versions for normal derivatives of the surface volume to any order. The exact form of the constant in the next term of the series is unknown and more work must be done to determine a general trend for the constants, and hence find the general series.
 
 \section{Fluctuations}
-So far we have only talked about the mean of the causal set boundary action. Let us now turn to its fluctuations (the standard deviation) $\sigma[\textbf{S}^{ (d)}_{GHY}]=\text{Var}[\textbf{S}^{ (d)}_{GHY}]^\frac12$.\footnote{Whenever we say fluctuations we refer to the standard deviation of the random variable, not to its variance.} We can make a heuristic argument to estimate the dependence of fluctuations on $\rho=l^{-d}$. In any spacetime region of fixed volume $V$ the number of causal set elements in a sprinkling is a random variable, $\textbf{N}$, with mean $\left\langle\textbf{N}\right\rangle=\rho V$, and Poisson fluctuations of order $\sqrt{\left\langle\textbf{N}\right\rangle}$. We will use $\textbf{S}^{ (d)}_{0}$ for the boundary action, as it is the simplest case in which to make this argument for the fluctuations. We believe this choice is valid as the simulations have suggested that all members of the $\textbf{S}^{ (d)}_{GHY}$ family have similar fluctions. Since $\BF{0}$ and $\BP{0}$ are random variables associated with a codimension-1 surface (they count elements ``near" $\Sigma$), we may expect their mean values to scale like $\left\langle\textbf{N}\right\rangle^\frac{d-1}{d}$ --- which agrees with the leading order behaviour of~\eqref{eq:nmax_nmin_final} --- and hence that they inherit fluctuations of order $\left\langle\textbf{N}\right\rangle^\frac{d-1}{2d} = (\rho V)^\frac{d-1}{2d}$. 
+So far we have only talked about the mean of the causal set boundary action. Let us now turn to its fluctuations (the standard deviation) $\sigma[\textbf{S}^{ (d)}_{GHY}]=\text{Var}[\textbf{S}^{ (d)}_{GHY}]^\frac12$.\footnote{Whenever we say fluctuations we refer to the standard deviation of the random variable, not to its variance.} We can make a heuristic argument to estimate the dependence of fluctuations on $\rho=l^{-d}$. In any spacetime region of fixed volume $V$ the number of causal set elements in a sprinkling is a random variable, $\textbf{N}$, with mean $\left\langle\textbf{N}\right\rangle=\rho V$, and Poisson fluctuations of order $\sqrt{\left\langle\textbf{N}\right\rangle}$. We will use $\textbf{S}^{ (d)}_{0}$ for the boundary action, as it is the simplest case in which to make this argument for the fluctuations. We believe this choice is valid as the simulations have suggested that all members of the $\textbf{S}^{ (d)}_{GHY}$ family have similar fluctions. Since $\textbf{N}_{max}^{ (0)}$ and $\textbf{N}_{min}^{ (0)}$ are random variables associated with a codimension-1 surface (they count elements ``near" $\Sigma$), we may expect their mean values to scale like $\left\langle\textbf{N}\right\rangle^\frac{d-1}{d}$ --- which agrees with the leading order behaviour of~\eqref{eq:nmax_nmin_final} --- and thus they would inherit fluctuations of order $\left\langle\textbf{N}\right\rangle^\frac{d-1}{2d}$. 
 %{This comes from the following observation. In a volume corresponding to a thickening of the hypersurface $\Sigma$ by one unit of the discreteness scale $l$ (e.g. by Lie dragging the surface along its normal by an amount $l$),.... }
-The action $\textbf{S}^{ (d)}_{0}$, being proportional to $\rho^\frac{2-d}{d}$ times the difference of two independent\footnote{The independence is as a feature of the Poisson process in $M$: the number of elements $\textbf{N}[R]$ in any subregion $R\subset M$ is a Poisson variable itself, and for any two disjoint regions $R_1$, $R_2$ the numbers $\textbf{N}[R_1]$ and $\textbf{N}[R_2]$ are independent random variables.} random variables with standard deviation of order $\rho^\frac{d-1}{2d}$  should see fluctuations of order $\rho^\frac{2-d}{d}\rho^\frac{d-1}{2d}=\rho^\frac{3-d}{2d}$. This suggests that for $d=2$ these fluctuations should grow like $\rho^{\frac{1}{4}}$ as $\rho\rightarrow\infty$, for $d=3$ they should be constant, and for $d>3$ they should be damped.
+The action $\textbf{S}^{ (d)}_{0}$, being proportional to $\rho^\frac{2-d}{d}$ times the difference of two independent\footnote{The independence is as a feature of the Poisson process in $M$: the number of elements $\textbf{N}[R]$ in any subregion $R\subset M$ is a Poisson variable itself, and for any two disjoint regions $R_1$, $R_2$ the numbers $\textbf{N}[R_1]$ and $\textbf{N}[R_2]$ are independent random variables.} random variables with standard deviation $\left\langle\textbf{N}\right\rangle^\frac{d-1}{2d} = (\rho V)^\frac{d-1}{2d}$ should see fluctuations of order $\rho^\frac{2-d}{d}\rho^\frac{d-1}{2d}=\rho^\frac{3-d}{2d}$. This suggests that for $d=2$ these fluctuations should grow like $\rho^{\frac{1}{4}}$ as $\rho\rightarrow\infty$, for $d=3$ they should be constant, and for $d>3$ they should be damped.
 
 In order to test this heuristic argument one may like to write down the integral expression for $\text{Var}[\textbf{S}^{ (d)}_0]^\frac12$ but it is complicated enough even in finite regions of flat space, for which it is not very illuminating to reproduce here. It also seems far less tractable than the expression for the mean because it involves terms of the type $\int d^dx\int d^dy \exp\left[-\rho V (J^+ (x)\cap J^+ (y))\right]$ for which the above methods of cutting off the time-integration range and Taylor expanding will not follow through. Instead we will show the results of computer simulations that support results of the heuristic argument. 
 
@@ -455,12 +455,12 @@ In order to test this heuristic argument one may like to write down the integral
 %\end{figure}
 
  
-The simulations were carried out as follows. Denote the discreteness scale by $l$. Take a $d$-cube $[0,L]^d$ in $d$-dimensional Minkowski space with metric $ds^2=-dt^2+d{\mathbf x}^2$ and define the hypersurface $\Sigma: t=L/2$, which partitions the cube into two equal halves. Sprinkle at density $\rho=l^{-d}$ into the cube, which in any given run will place $N$ points inside the cube, where $N$ is the realisation of the Poisson random number $\textbf{N}$ with mean $\left\langle \textbf{N}\right\rangle = \rho V=  (L/l)^d$. Evaluate $S^{ (d)}_0=\rho^\frac{2-d}{d}c_d\left (2\Gamma\left (\frac{2}{d}\right)\right)^{-1} (\F{0} - \P{0})$ for $\Sigma$ by counting the minimal/maximal elements in the upper/lower half of the cube ($S^{ (d)}_0$, $\F{0}$, and $\P{0}$ of course being realisations of the random variables $\textbf{S}^{ (d)}_0$, $\BF{0}$, and $\BP{0}$), and repeat for $R$ runs. The value we expect for the mean (sum of all $S^{ (d)}_0$ values for each run divided by $R$) is zero in all cases, since the extrinsic curvature of the surface is zero.
+The simulations were carried out as follows. Denote the discreteness scale by $l$. Take a $d$-cube $[0,L]^d$ in $d$-dimensional Minkowski space with metric $ds^2=-dt^2+d{\mathbf x}^2$ and define the hypersurface $\Sigma: t=L/2$, which partitions the cube into two equal halves. Sprinkle at density $\rho=l^{-d}$ into the cube, which in any given run will place $N$ points inside the cube, where $N$ is the realisation of the Poisson random number $\textbf{N}$ with mean $\left\langle \textbf{N}\right\rangle = \rho V=  (L/l)^d$. Evaluate $S^{ (d)}_0=\rho^\frac{2-d}{d}c_d\left (2\Gamma\left (\frac{2}{d}\right)\right)^{-1} (N^{ (0)}_{\vphantom{i}max} - N_{min}^{ (0)})$ for $\Sigma$ by counting the minimal/maximal elements in the upper/lower half of the cube ($S^{ (d)}_0$, $N^{ (0)}_{\vphantom{i}max}$, and $N^{ (0)}_{min}$ of course being realisations of the random variables $\textbf{S}^{ (d)}_0$, $\textbf{N}^{ (0)}_{\vphantom{i}max}$, and $\textbf{N}^{ (0)}_{min}$), and repeat for $R$ runs. The value we expect for the mean (sum of all $S^{ (d)}_0$ values for each run divided by $R$) is zero in all cases, since the extrinsic curvature of the surface is zero.
 
 In Figure~\ref{fig:fluctuations} we display the simulation results for $d=2,3,4$ spacetime dimensions, with $\left\langle\textbf{N}\right\rangle=\rho$ ranging up to $2^{20}\approx 1$ million, having set $V=L^d=1$. Each data point represents the fluctuations (the standard deviation) in a sample of $R=100$ runs. The solid lines have been obtained by fitting an arbitrary constant multiplier in the scaling law predicted by the argument above, $\gamma (d)\times \left\langle\textbf{N}\right\rangle^\frac{3-d}{2d}$, to the data sets. The best fit values are all of order $1$: $\gamma (2)=0.63$, $\gamma (3)=0.91$, and $\gamma (4)=1.07$.
 There is clearly a good fit between the data and the scaling predicted by the heuristic argument. Although not visible on the plot, the data points were all consistent with zero mean as well.
 
-As mentioned above, we have performed analogous simulations for other family members, such as $\mathbf S^{ (d)}_+$. This expression involves the terms $\BF{0}$ and $\BF{1}$, which means that heuristic arguments of the type given above are hampered by the fact that the two random variables whose difference is taken are not independent. However, the results for the scaling of the fluctuations turn out to be identical to those obtained in the first case.
+As mentioned above, we have performed analogous simulations for other family members, such as $S^{ (d)}_+$. This expression involves the terms $N^{ (1)}_{max}$ and $N^{ (0)}_{max}$, which means that heuristic arguments of the type given above are hampered by the fact that the two random variables whose difference is taken are not independent. However, the results for the scaling of the fluctuations turn out to be identical to those obtained in the first case.
 
 \section{A Candidate Boundary Term for an Alexandrov Interval}
 \newcommand{\vol}{\mathrm{vol}}
@@ -470,7 +470,7 @@ The candidate described in the previous sections for a spatial boundary has a na
 
 Conversely in the continuum, while the GHY term  is well defined for both a space-like and time-like boundary  (including their co-dimension 2 joints)  it is an open question what the contribution from a null  boundary  is \cite{Gibbons_Hawking_Boundary, Harris}. Apart from some sketchy suggestions in the literature \cite{neiman} there is no rigourous construction of such a term; indeed the standard variational route for finding the boundary contribution to the action appears to fail for null boundaries. 
 
-Given our ignorance in this matter,  we can ask if causal set theory  might  in fact guide us in the right direction.   Our starting point is the $d$-dimensional  Benincasa-Dowker Action \cite{Benincasa_Dowker:The_Scalar_Curvature_of_a_Causal_Set, Dowker_Glaser:dAlembertians_for_Causal_Sets} which is constructed from the mean number  $N_i^{ (d)}$ of $i+1$-element inclusive intervals in the causal set\footnote{ $N_i^{ (d)}$ is dimension  and geometry dependent, but for our purpose it suffices to retain the dimension label. }
+Given our ignorance in this matter,  we can ask if causal set theory  might  in fact guide us in the right direction.   Our starting point is the $d$-dimensional  Benincasa-Dowker Action \cite{Benincasa_Dowker:The_Scalar_Curvature_of_a_Causal_Set, Dowker_Glaser:dAlembertians_for_Causal_Sets} which is constructed from the mean number  $N_i^{ (d)}$\footnote{ $N_i^{ (d)}$ is dimension  and geometry dependent, but for our purpose it suffices to retain the dimension label. } of $i+1$-element inclusive intervals in the causal set 
 \begin{equation}   
 8 \pi G {S_{BD}^{ (d)}}\left[\mathcal C\right] = -\alpha_d \rho^{\frac{2-d}{d}}\biggl ( N[\mathcal C]+ \frac{\beta_d}{ \alpha_d} \sum_{i=1}^{n_d-1}  C^{ (d)}_{i} N _i^{ (d)}[\mathcal C] \biggr) 
 \label{bd} 
