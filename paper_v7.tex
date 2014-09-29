@@ -91,13 +91,13 @@ Determining rules for a partition to correspond to a timelike hypersurface in th
         \caption{The partition induced by the sprinkling is unchanged after tilting the surface between null and spacelike. With an even higher density, as in (b), one can simply titl the surface by some smaller amount to keep the partition unaltered.}\label{fig:animals}
 \end{figure}
 
-For a given causet $\mathcal C$, let us define the function $\F{k}\left[\mathcal{C} \right]$, which counts the number of elements in $\mathcal C$ that have exactly $k$ elements in their future, and the function $\P{k}\left[\mathcal{C}\right]$, which counts the number of elements which have exactly $k$ elements in their past. An $F_0$ element is then a \emph{maximal} element, a $P_0$ element is a \emph{minimal} element, an $F_1$ element is (in some sense) next-to-maximal, and so on.\mb{Ian: your plot here?}
+For a given causet $\mathcal C$, let us define the function $\F{k}\left[\mathcal{C} \right]$, which counts the number of elements in $\mathcal C$ that have exactly $k$ elements in their future, and the function $\P{k}\left[\mathcal{C}\right]$, which counts the number of elements which have exactly $k$ elements in their past. An ``$F_0$ element'' is then a \emph{maximal} element, a ``$P_0$ element'' is a \emph{minimal} element, an ``$F_1$ element'' is (in some sense) next-to-maximal, and so on.\mb{Ian: your plot here?}
 
 Given a causet, $\mathcal{C}$, with a spacelike partition so that $\mathcal C = \mathcal C^+ \cup\, \mathcal C^-$, we propose the following family of functions as the generalised bounary action:
 \be\label{general_boundary_sum}
 S^{ (d)}_{GHY}\left[\mathcal{C}^-,\mathcal{C}^+;\vec{p}, \vec{q} \right]= \left (l/l_p\right)^{d-2} c_{d}
 \left ( \sum_m p_m \F{m}\left[\mathcal{C}^- \right]
-+  \sum_n q_n \P{m}\left[\mathcal{C}^+ \right]\right)
++  \sum_n q_n \P{n}\left[\mathcal{C}^+ \right]\right)
 \ee
 where the constant $c_{d}$ only depends on the spacetime dimension and is given by
 \be\label{Cn}
@@ -126,12 +126,12 @@ S^{ (d)}_{0}\left[\mathcal{C}^-,\mathcal{C}^+\right]:=S^{ (d)}_{GHY}\left[\mathc
 where $\vec{p}=\left (\left (2\Gamma\left (\frac{2}{d} \right)\right)^{-1},0,0,...\right)$.
 This expression is the easiest to employ computationally, and we shall use its random variable counterpart, $\textbf{S}^{ (d)}_{0}\left[M^-,M^+,\rho\right]:=\textbf{S}^{ (d)}_{GHY}\left[M^-,M^+,\rho;\vec{p}, -\vec{p} \right]$, later when we study the fluctuations of the discrete boundary actions numerically.
 
-If one wants to calculate the GHY boundary term for the future (past) boundary of a single causet, $\mathcal{C}$, then one simply inserts $\mathcal{C}$ into the $\mathcal{C}^-$ ($\mathcal{C}^+$) argument of $S^{ (d)}_{GHY}$ and sets $\vec{q}$ ($\vec{p}$) to the zero vector, $\mathbf{0}= (0,0,...)$. This renders the $\mathcal{C}^+$ ($\mathcal{C}^-$) argument unnecessary and so one can insert the empty set, $\emptyset$, for convenience. We define the functions for the future and past boundaries respectively as:
+If one wants to calculate the GHY boundary term for the future (past) boundary of a single causet, $\mathcal{C}$, then one simply inserts $\mathcal{C}$ into the $\mathcal{C}^-$ ($\mathcal{C}^+$) argument of $S^{ (d)}_{GHY}$ and sets $\vec{q}$ ($\vec{p}$) to the zero vector, $\vec{0}= (0,0,...)$. This renders the $\mathcal{C}^+$ ($\mathcal{C}^-$) argument unnecessary and so one can insert the empty set, $\emptyset$, for convenience. We define the functions for the future and past boundaries respectively as:
 \begin{align}\label{eq:future_past_boundary_terms1}
-S^{ (d)}_{+}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\mathcal{C},\emptyset;\vec{p},\mathbf{0}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( d\:\F{1}\left[\mathcal{C} \right] - \F{0}\left[\mathcal{C} \right] \right)
+S^{ (d)}_{+}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\mathcal{C},\emptyset;\vec{p},\vec{0}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( d\:\F{1}\left[\mathcal{C} \right] - \F{0}\left[\mathcal{C} \right] \right)
 \\
 \label{eq:future_past_boundary_terms2}
-S^{ (d)}_{-}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\emptyset,\mathcal{C};\mathbf{0},-\vec{p}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( \P{0}\left[\mathcal{C} \right] - d\: \P{1}\left[\mathcal{C} \right] \right)
+S^{ (d)}_{-}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\emptyset,\mathcal{C};\vec{0},-\vec{p}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( \P{0}\left[\mathcal{C} \right] - d\: \P{1}\left[\mathcal{C} \right] \right)
 \end{align}
 where $\vec{p}=\left (-\Gamma\left (\frac{2}{d} \right)^{-1},d\:\Gamma\left (\frac{2}{d} \right)^{-1},0,0,...\right)$. In writing down an action for a particular causal set, $\mathcal{C}$, one would write down the Benincasa-Dowker action, $S^{ (d)}_{BD}[\mathcal{C}]$. To complete the story we propose that one must include the boundary terms $S^{ (d)}_{+}[\mathcal{C}]$ and $S^{ (d)}_{-}[\mathcal{C}]$. Explicitly, the total action for a causal set should be given by:
 \be\label{eq:total_causet_action}
@@ -145,7 +145,7 @@ A^{ (d)}[\mathcal{C}^-,\mathcal{C}^+;\vec{p},\vec{q}]=\left (l/l_p\right)^{d-1}b
 \ee
 where the constant $b_d$ is given by
 \be\label{constant_b_d}
-b_d=d\left[\frac{V_{d-1}}{d}\right]^{\frac{1}{d}}
+b_d=d\left(\frac{V_{d-1}}{d}\right)^{\frac{1}{d}}
 \ee
 and we have used similar definitions for the arguments $\vec{p}$ and $\vec{q}$. This time however, the coefficients must satisfy 
 \be\label{area_coefficient_relation}
@@ -159,9 +159,9 @@ where the right hand side is the spatial volume of the surface $\Sigma$. In prov
 
 By making the same restrictions on the arguments as we did for $S^{ (d)}_{GHY}$, we can find expressions for the causal set analogue of the spatial volume of the future or past boundaries. We define functions for the future and past boundaries respectively as two of the simplest members of the family:
 \begin{align}\label{eq:future_past_spatial_volume}
-A^{ (d)}_{+}[\mathcal{C}]:=A^{ (d)}[\mathcal{C},\emptyset;\vec{p},\mathbf{0}]= & \left (l/l_p\right)^{d-1}\frac{b_{d}}{\Gamma\left (\frac{1}{d}\right)}\: \F{0}[\mathcal{C}]
+A^{ (d)}_{+}[\mathcal{C}]:=A^{ (d)}[\mathcal{C},\emptyset;\vec{p},\vec{0}]= & \left (l/l_p\right)^{d-1}\frac{b_{d}}{\Gamma\left (\frac{1}{d}\right)}\: \F{0}[\mathcal{C}]
 \\
-A^{ (d)}_{-}[\mathcal{C}]:=A^{ (d)}[\emptyset,\mathcal{C};\mathbf{0},\vec{p}]= & \left (l/l_p\right)^{d-1}\frac{b_{d}}{\Gamma\left (\frac{1}{d}\right)}\: \P{0}[\mathcal{C}]
+A^{ (d)}_{-}[\mathcal{C}]:=A^{ (d)}[\emptyset,\mathcal{C};\vec{0},\vec{p}]= & \left (l/l_p\right)^{d-1}\frac{b_{d}}{\Gamma\left (\frac{1}{d}\right)}\: \P{0}[\mathcal{C}]
 \end{align}
 where $\vec{p}= (\Gamma\left (\frac{1}{d}\right)^{-1},0,0,...)$.
 
