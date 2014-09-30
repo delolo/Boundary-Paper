@@ -49,9 +49,9 @@ In order to say we have a causal set analogue for a continuous expression we nee
 
 \section{The Claims}
 
-Consider a sufficiently well-behaved $d$-dimensional spacetime $(M,g)$ and a surface $\Sigma$ in $M$, which we shall take to be a Cauchy surface (hence $(M,g)$ is globally hyperbolic). The causal past and future sets $M^\pm=J^\pm (\Sigma)$ of the surface then form a partition of $M$, and $\partial M^\pm = \Sigma$ ($J^\pm$ denoting the chronological future/past). The Gibbons-Hawking-York boundary term for $M^\pm$ is in this case given by
+Consider a sufficiently well-behaved $d$-dimensional spacetime $(M,g)$ and a surface $\Sigma$ in $M$, which we shall take to be a Cauchy surface\mb{maybe too strong. what about boxes then? maybe partitioning surface?}. The causal past and future sets $M^\pm=J^\pm (\Sigma)$ of the surface then form a partition of $M$, and $\partial M^\pm = \Sigma$. The Gibbons-Hawking-York boundary term for $M^\pm$ is in this case given by
 \be\label{eq:GHYBT_in_continuum}
-\mathcal{S}_{GHY} = \mp \frac{1}{l_p^{d-2}}\int_{\Sigma} K d\Sigma
+{S}^{(d)}_{GHY}\left[M^\pm\right]= \mp \frac{1}{l_p^{d-2}}\int_{\Sigma} K d\Sigma
 \ee
 where $l_p$ is the rationalised Planck length and $K$ is the trace of the extrinsic curvature $K_{\mu\nu}=h_{\mu}^\rho h_\nu^\sigma \nabla_\rho n_\sigma$ of $\Sigma$ defined with future-pointing timelike unit normal covector $n_{\mu}=\partial_\mu S/\sqrt{g^{\mu\nu}\partial_\mu S\partial_\nu S}$. (We work with a mostly plus convention for the metric, in which this translates into a past-pointing normal vector $n^{\mu}$).\mb{ok or more detail on conventions needed?}
 
@@ -65,9 +65,9 @@ where the right hand side is the derivative of the area $\int d\Sigma$ as each p
 
 Spacetime volume in the causal set is obtained simply by counting the number of elements, and hence the volume gradient intuitively corresponds to the difference in the number of ``immediate neighbours'' to the future and to the past of a hypersurface. In order to make this notion precise, we need to define the causal set analogue of a hypersurface, as well as an appropriate notion of ``closeness'' to it. This turns out to be most natural for the analogue of what in the continuum would correspond to a Cauchy hypersurface. 
 
-Given a causet that can be faithfully embedded in a manifold $M$ with Cauchy hypersurface $\Sigma$, we can partition the causet into two sets $\mathcal{C}^+$ and $\mathcal{C}^-$, corresponding to the sets of elements that lie in $M^+=J^+(\Sigma)$ and $M^-=J^-(\Sigma)$. By virtue of $\Sigma$ being Cauchy, the set $\mathcal C^-$ contains its own past (i.e. any element in $\mathcal C$ that precedes at least one element in $\mathcal{C}^-$ is also in $\mathcal{C}^-$). Such a set is known as a \emph{past stem}. Similarly, $\mathcal C^+$ is a \emph{future stem} given the analogous definition. These properties capture the essential features of a partition induced by a Cauchy surface. Hence we propose more generally that for any causet $\mathcal C$, a \emph{Cauchy partition} is a partition that splits $\mathcal{C}$ into two parts, $\mathcal{C}^-$ and $\mathcal{C}^+=\mathcal{C}\setminus\mathcal{C}^-$ \IGNORE{($\mathcal{C}=\mathcal{C}^-\cup\mathcal{C}^+$)}, such that $\mathcal{C}^-$ is a past stem (or, equivalently, that $\mathcal{C}^+$ be a future stem and $\mathcal{C}^- = \mathcal{C}\setminus\mathcal{C}^+$). A sprinkling into a manifold with Cauchy surface will of course produce a causal set with Cauchy partition, but we shall refer to a partition of a causal set satisfying the above definition as Cauchy even when the causet is not obtained via sprinkling faithfully embeddable into some manifold.
+Given a causet that can be faithfully embedded in a manifold $M$ with Cauchy hypersurface $\Sigma$, we obtain a natural partition of the causet into two parts $\mathcal{C}^+$ and $\mathcal{C}^-$, corresponding to the sets of elements that lie in $M^+=J^+(\Sigma)$ and $M^-=J^-(\Sigma)$. By virtue of $\Sigma$ being Cauchy, the set $\mathcal C^-$ contains its own past, that is, any element in $\mathcal C$ that precedes at least one element in $\mathcal{C}^-$ is also in $\mathcal{C}^-$. Such a set is known as a \emph{past stem}. Similarly, $\mathcal C^+$ is a \emph{future stem} given an analogous definition. These two properties capture the essential features of a partition induced by a Cauchy surface. Hence we propose more generally that for any causet $\mathcal C$, a \emph{Cauchy partition} is a partition that splits $\mathcal{C}$ into two parts, $\mathcal{C}^-$ and $\mathcal{C}^+=\mathcal{C}\setminus\mathcal{C}^-$ \IGNORE{($\mathcal{C}=\mathcal{C}^-\cup\mathcal{C}^+$)}, such that $\mathcal{C}^-$ is a past stem (or, equivalently, that $\mathcal{C}^+$ is a future stem and $\mathcal{C}^- = \mathcal{C}\setminus\mathcal{C}^+$). A sprinkling into a manifold with Cauchy surface will of course produce a causal set with Cauchy partition, but we shall refer to a partition of a causal set satisfying the above definition as Cauchy even when the causet is not obtained via sprinkling faithfully embeddable into some manifold.
 
-Given a causal set with Cauchy partition, there follows a natural definition for the ``immediate neighbours'' in the past and future sets of the partition. The ``immediate neighbours in the past'' can be defined as those elements of $\mathcal{C}^-$ that have no elements in their causal future in $\mathcal{C}^-$. Such elements will be referred to as \textit{maximal elements} in $\mathcal{C}^-$. We assume an analogous definition for immediate neighbours to the $future$ of the partition, which we shall refer to as \emph{minimal elements} in $\mathcal{C}^+$. 
+Given a causal set with Cauchy partition, there follows a natural definition for the ``immediate neighbours'' in the past and future sets of the partition. The ``immediate neighbours in the past'' of the partition can be defined as those elements of $\mathcal{C}^-$ that have no elements in their causal future in $\mathcal{C}^-$. Such elements will be referred to as \textit{maximal elements} in $\mathcal{C}^-$. We assume an analogous definition for immediate neighbours to the $future$ of the partition, which we shall refer to as \emph{minimal elements} in $\mathcal{C}^+$. 
 
 Given these definitions, we will see that the intuitive idea for the boundary term as the ``rate of change of spacetime atoms'' across a partition indeed bears out. \\
 %However, one does not need to know the maximal and minimal elements to calculate the boundary term. It can be found from any elements that lie reasonably close to the surface (in the time coordinate on $M$) but are not necessarily maximal or minimal. This will be made more precise below.
@@ -91,19 +91,20 @@ Determining rules for a partition to correspond to a timelike hypersurface in th
         \caption{The partition induced by the sprinkling is unchanged after tilting the surface between null and spacelike. With an even higher density, as in (b), one can simply titl the surface by some smaller amount to keep the partition unaltered.}\label{fig:animals}
 \end{figure}
 
-For a given causet $\mathcal C$, let us define the function $\F{k}\left[\mathcal{C} \right]$, which counts the number of elements in $\mathcal C$ that have exactly $k$ elements in their future, and the function $\P{k}\left[\mathcal{C}\right]$, which counts the number of elements which have exactly $k$ elements in their past. An ``$F_0$ element'' is then a \emph{maximal} element, a ``$P_0$ element'' is a \emph{minimal} element, an ``$F_1$ element'' is (in some sense) next-to-maximal, and so on.\mb{Ian: your plot here?}
+For a given causet $\mathcal C$, let us define the function $\F{k}\left[\mathcal{C}\,\right]$, which counts the number of elements in $\mathcal C$ that have exactly $k$ elements in their future, and the function $\P{k}\left[\mathcal{C}\,\right]$, which counts the number of elements which have exactly $k$ elements in their past. An ``$F_0$ element'' is then a \emph{maximal} element, a ``$P_0$ element'' is a \emph{minimal} element, an ``$F_1$ element'' is (in some sense) next-to-maximal, and so on.\mb{Ian: your plot here?}
 
-Given a causet, $\mathcal{C}$, with a spacelike partition so that $\mathcal C = \mathcal C^+ \cup\, \mathcal C^-$, we propose the following family of functions as the generalised bounary action:
+Given a causet, $\mathcal{C}$, with a spacelike partition so that $\mathcal C = \mathcal C^+ \cup\, \mathcal C^-$, we propose the following family of functions as the generalised causal set boundary action:
 \be\label{general_boundary_sum}
-S^{ (d)}_{GHY}\left[\mathcal{C}^-,\mathcal{C}^+;\vec{p}, \vec{q} \right]= \left (l/l_p\right)^{d-2} c_{d}
+S^{ (d)}_{GHY}\left[\mathcal{C}^-,\mathcal{C}^+;\vec{p}, \vec{q}\,\right]= \left (l/l_p\right)^{d-2} c_{d}
 \left ( \sum_m p_m \F{m}\left[\mathcal{C}^- \right]
 +  \sum_n q_n \P{n}\left[\mathcal{C}^+ \right]\right)
 \ee
 where the constant $c_{d}$ only depends on the spacetime dimension and is given by
 \be\label{Cn}
-c_{d}=\frac{d (d+1)}{ (d+2)}\left[\frac{V_{d-1}}{d}\right]^{\frac{2}{d}},
+c_{d}=\frac{d (d+1)}{ (d+2)}\left(\frac{V_{d-1}}{d}\right)^{\frac{2}{d}},
 \ee
-and where $V_d=\pi^{\frac{d}{2}}/\Gamma\left (\frac{d}{2}+1\right)$ denotes the volume of the unit $d$-ball ($\Gamma (t)$ is a gamma function, defined as $\Gamma (t):=\int_0^\infty dx\: x^{t-1}\: e^{-x}$). We have used $\vec{p}$ and $\vec{q}$ to stand for infinite dimensional vectors $ (p_0,...,p_m,..)$ and $ (q_0,...,q_n,..)$ respectively, where all the $p_m,\: q_n \in \mathbb{R}$. These vectors contain a finite number of non-zero entries, corresponding to the coefficients of the different $N_{{max\vphantom{i}}}^{\: (m)}$ and $N_{{min}}^{\: (n)}$ terms. We use the summation $\sum_m$ ($\sum_n$) to denote a sum that runs from $0$ to $m_{max}$ ($n_{max}$), where $m_{max}$ ($n_{max}$) is some integer, the value of which depends on the causet $\mathcal{C}^-$ ($\mathcal{C}^+$), for which all $\F{m}\left[\mathcal{C}^- \right]=0$ ($\P{m}\left[\mathcal{C}^+ \right]=0$) for any $m>m_{max}$ ($n>n_{max}$). A finite value for $m_{max}$ ($n_{max}$) will always exist for any finite causet, as it will not be large enough or be structured in such a way to have any $\F{m}$ ($\P{n}$) elements for $m>m_{max}$ ($n>n_{max}$). The vectors must be chosen such that they satisfy the following conditions.
+
+$V_d=\pi^{\frac{d}{2}}/\Gamma\left (\frac{d}{2}+1\right)$ denotes the volume of the unit $d$-ball and $\Gamma (t)$ is the gamma function. We have used $\vec{p}$ and $\vec{q}$ to stand for infinite dimensional vectors $ (p_0,...,p_m,..)$ and $ (q_0,...,q_n,..)$ respectively, where all the $p_m,\: q_n \in \mathbb{R}$. These vectors contain a finite number of non-zero entries, corresponding to the coefficients of the different $\F{m}$ and $\P{m}$ terms. We use the summation $\sum_m$ ($\sum_n$) to denote a sum that runs from $0$ to $m_{max}$ ($n_{max}$), where $m_{max}$ ($n_{max}$) is some integer, the value of which depends on the causet $\mathcal{C}^-$ ($\mathcal{C}^+$), for which all $\F{m}\left[\mathcal{C}^- \right]=0$ ($\P{m}\left[\mathcal{C}^+ \right]=0$) for any $m>m_{max}$ ($n>n_{max}$). A finite value for $m_{max}$ ($n_{max}$) will always exist for any finite causet, as it will not be large enough or be structured in such a way to have any $\F{m}$ ($\P{n}$) elements for $m>m_{max}$ ($n>n_{max}$). The vectors must be chosen such that they satisfy the following conditions.
 \begin{align}\label{coefficient_relation1}
 & \sum_m p_m \frac{\Gamma\left (\frac{1}{d}+m \right)}{m!}  + \sum_n q_n\frac{\Gamma\left (\frac{1}{d}+n \right)}{n!}=0
 \\
@@ -121,17 +122,17 @@ There is a huge amount of freedom that remains in the choice of $\vec{p}$ and $\
 
 There are a few, two-term, members of the family that are worth mentioning, as they have simple forms that make them good candidates for computations. Given a causet, $\mathcal{C}$, with a spacelike partition so that $\mathcal C = \mathcal C^+ \cup\, \mathcal C^-$, we define the function $S^{ (d)}_0$ as a particular member of the family in~\eqref{general_boundary_sum}:
 \be\label{eq:min_max_simple_formula}
-S^{ (d)}_{0}\left[\mathcal{C}^-,\mathcal{C}^+\right]:=S^{ (d)}_{GHY}\left[\mathcal{C}^-,\mathcal{C}^+;\vec{p}, -\vec{p} \right]=\left (l/l_p\right)^{d-2}\frac{c_{d}}{2\Gamma\left (\frac{2}{d} \right)}\left ( \F{0}\left[\mathcal{C}^- \right] - \P{0}\left[\mathcal{C}^+ \right] \right)
+S^{ (d)}_{0}\left[\mathcal{C}^-,\mathcal{C}^+\right]:=S^{ (d)}_{GHY}\left[\mathcal{C}^-,\mathcal{C}^+;\vec{p}, -\vec{p}\,\right]=\left (l/l_p\right)^{d-2}\frac{c_{d}}{2\Gamma\left (\frac{2}{d} \right)}\left ( \F{0}\left[\mathcal{C}^- \right] - \P{0}\left[\mathcal{C}^+ \right] \right)
 \ee
 where $\vec{p}=\left (\left (2\Gamma\left (\frac{2}{d} \right)\right)^{-1},0,0,...\right)$.
-This expression is the easiest to employ computationally, and we shall use its random variable counterpart, $\textbf{S}^{ (d)}_{0}\left[M^-,M^+,\rho\right]:=\textbf{S}^{ (d)}_{GHY}\left[M^-,M^+,\rho;\vec{p}, -\vec{p} \right]$, later when we study the fluctuations of the discrete boundary actions numerically.
+This expression is the easiest to employ computationally, and we shall use its random variable counterpart, $\textbf{S}^{ (d)}_{0}\left[M^-,M^+,\rho\right]:=\textbf{S}^{ (d)}_{GHY}\left[M^-,M^+,\rho;\vec{p}, -\vec{p}\,\right]$, later when we study the fluctuations of the discrete boundary actions numerically.
 
 If one wants to calculate the GHY boundary term for the future (past) boundary of a single causet, $\mathcal{C}$, then one simply inserts $\mathcal{C}$ into the $\mathcal{C}^-$ ($\mathcal{C}^+$) argument of $S^{ (d)}_{GHY}$ and sets $\vec{q}$ ($\vec{p}$) to the zero vector, $\vec{0}= (0,0,...)$. This renders the $\mathcal{C}^+$ ($\mathcal{C}^-$) argument unnecessary and so one can insert the empty set, $\emptyset$, for convenience. We define the functions for the future and past boundaries respectively as:
 \begin{align}\label{eq:future_past_boundary_terms1}
-S^{ (d)}_{+}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\mathcal{C},\emptyset;\vec{p},\vec{0}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( d\:\F{1}\left[\mathcal{C} \right] - \F{0}\left[\mathcal{C} \right] \right)
+S^{ (d)}_{+}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\mathcal{C},\emptyset;\vec{p},\vec{0}\,\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( d\:\F{1}\left[\mathcal{C}\,\right] - \F{0}\left[\mathcal{C}\,\right] \right)
 \\
 \label{eq:future_past_boundary_terms2}
-S^{ (d)}_{-}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\emptyset,\mathcal{C};\vec{0},-\vec{p}\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( \P{0}\left[\mathcal{C} \right] - d\: \P{1}\left[\mathcal{C} \right] \right)
+S^{ (d)}_{-}[\mathcal{C}]:= & S^{ (d)}_{GHY}\left[\emptyset,\mathcal{C};\vec{0},-\vec{p}\,\right] =\left (l/l_p\right)^{d-2}\frac{c_{d}}{\Gamma\left (\frac{2}{d} \right)}\left ( \P{0}\left[\mathcal{C}\,\right] - d\: \P{1}\left[\mathcal{C}\,\right] \right)
 \end{align}
 where $\vec{p}=\left (-\Gamma\left (\frac{2}{d} \right)^{-1},d\:\Gamma\left (\frac{2}{d} \right)^{-1},0,0,...\right)$. In writing down an action for a particular causal set, $\mathcal{C}$, one would write down the Benincasa-Dowker action, $S^{ (d)}_{BD}[\mathcal{C}]$. To complete the story we propose that one must include the boundary terms $S^{ (d)}_{+}[\mathcal{C}]$ and $S^{ (d)}_{-}[\mathcal{C}]$. Explicitly, the total action for a causal set should be given by:
 \be\label{eq:total_causet_action}
@@ -165,13 +166,13 @@ A^{ (d)}_{-}[\mathcal{C}]:=A^{ (d)}[\emptyset,\mathcal{C};\vec{0},\vec{p}]= & \l
 \end{align}
 where $\vec{p}= (\Gamma\left (\frac{1}{d}\right)^{-1},0,0,...)$.
 
-%MB1: (too vague) During the calculation approximations will be made. These approximations are justified on the grounds that if certain orders are retained throughout the calculation they will in fact vanish in the limit $\rho \rightarrow \infty$
-%\begin{figure}
-  %\centering
-   % {\includegraphics[width=\textwidth]{minmaxplot}}
-    % \caption{An illustration of the idea. Pictured here is a causal set obtained by a sprinkling into a spacetime partitioned by a spacelike hypersurface. The minimal and maximal points about the surface are highlighted and the shaded regions illustrate the regions whose volumes $V_\blacktriangle$ and $V_\blacktriangledown$ are needed in the proof.}
-     %\label{fig:Nmin_Nmax}
-%*\end{figure}
+MB1: (too vague) During the calculation approximations will be made. These approximations are justified on the grounds that if certain orders are retained throughout the calculation they will in fact vanish in the limit $\rho \rightarrow \infty$
+\begin{figure}
+  \centering
+    {\includegraphics[width=\textwidth]{minmaxplot}}
+     \caption{An illustration of the idea. Pictured here is a causal set obtained by a sprinkling into a spacetime partitioned by a spacelike hypersurface. The minimal and maximal points about the surface are highlighted and the shaded regions illustrate the regions whose volumes $V_\blacktriangle$ and $V_\blacktriangledown$ are needed in the proof.}
+     \label{fig:Nmin_Nmax}
+*\end{figure}
 
 \section{The Proof}
 
@@ -311,12 +312,12 @@ where $r_{max} (\boldsymbol\phi)$ is the value of the radial coordinate for whic
 \frac{1}{2}f (\mathbf{x}_p,\boldsymbol\phi){r_{max}}^2 (\boldsymbol\phi)=-r_{max} (\boldsymbol\phi)+T
 \ee 
 for $r_{max} (\boldsymbol\phi)$ and take the positive solution. The solution can be expanded in $T$ and is simply $r_{max}=T+O (T^2)$, with angular dependent terms contributing at $O (T^2)$. The $O (T^2)$ term will contribute at $O (T^{d+2})$ in the volume integral and so can be ignored. Substituting $r_{max}=T$ into (\ref{eq:VolumeIntegralSpherical}) allows us to evaluate the integral, wherein we find 
-%\begin{figure}[t]
- % \centering
-  %  {\includegraphics[scale=0.5]{coneplot}}
-   %  \caption{The size of the region inside the top and bottom bounding surfaces is the volume we want to calculate.}
-    % \label{fig:cone_plot}
-%\end{figure}
+\begin{figure}[t]
+  \centering
+    {\includegraphics[scale=0.5]{coneplot}}
+     \caption{The size of the region inside the top and bottom bounding surfaces is the volume we want to calculate.}
+     \label{fig:cone_plot}
+\end{figure}
 \be\label{eq:VolumeNoK}
 V_\blacktriangle (p)
 =\frac{V_{d-1}}{d}T^d\left (1-\frac{d}{2 (d+1)}\Gamma^{0}_{\;ij} (p_0)A^{i}_{\;\ibar}A^{j}_{\;\jbar}\delta^{\ibar\jbar}T\right)
@@ -447,12 +448,12 @@ The action $\textbf{S}^{ (d)}_{0}$, being proportional to $\rho^\frac{2-d}{d}$ t
 
 In order to test this heuristic argument one may like to write down the integral expression for $\text{Var}[\textbf{S}^{ (d)}_0]^\frac12$ but it is complicated enough even in finite regions of flat space, for which it is not very illuminating to reproduce here. It also seems far less tractable than the expression for the mean because it involves terms of the type $\int d^dx\int d^dy \exp\left[-\rho V (J^+ (x)\cap J^+ (y))\right]$ for which the above methods of cutting off the time-integration range and Taylor expanding will not follow through. Instead we will show the results of computer simulations that support results of the heuristic argument. 
 
-%\begin{figure}[t!]
- % \centering
-  %  {\includegraphics[scale=0.6]{GHY-fluctuation_plots}}
-   %  \caption{A $\log-\log$ plot (base $2$) of the fluctuations in $S^{ (d)}_{GHY}$ for a flat ($K=0$) surface in $d=2,3$ and $4$-dimensional Minkowski space. Each data point represents the sample standard deviation in $S^{ (d)}_{GHY}$ on a sample of $R=100$ runs. Black dots, blue triangles and red squares correspond to the simulation results in $d=2,3$ and $4$ dimensions, respectively. The corresponding black, blue and red lines have gradients $\frac12$, $0$ and $-\frac18$ and best-fit intercepts of order $1$.}
-    % \label{fig:fluctuations}
-%\end{figure}
+\begin{figure}[t!]
+  \centering
+    {\includegraphics[scale=0.6]{GHY-fluctuation_plots}}
+     \caption{A $\log-\log$ plot (base $2$) of the fluctuations in $S^{ (d)}_{GHY}$ for a flat ($K=0$) surface in $d=2,3$ and $4$-dimensional Minkowski space. Each data point represents the sample standard deviation in $S^{ (d)}_{GHY}$ on a sample of $R=100$ runs. Black dots, blue triangles and red squares correspond to the simulation results in $d=2,3$ and $4$ dimensions, respectively. The corresponding black, blue and red lines have gradients $\frac12$, $0$ and $-\frac18$ and best-fit intercepts of order $1$.}
+     \label{fig:fluctuations}
+\end{figure}
 
  
 The simulations were carried out as follows. Denote the discreteness scale by $l$. Take a $d$-cube $[0,L]^d$ in $d$-dimensional Minkowski space with metric $ds^2=-dt^2+d{\mathbf x}^2$ and define the hypersurface $\Sigma: t=L/2$, which partitions the cube into two equal halves. Sprinkle at density $\rho=l^{-d}$ into the cube, which in any given run will place $N$ points inside the cube, where $N$ is the realisation of the Poisson random number $\textbf{N}$ with mean $\left\langle \textbf{N}\right\rangle = \rho V=  (L/l)^d$. Evaluate $S^{ (d)}_0=\rho^\frac{2-d}{d}c_d\left (2\Gamma\left (\frac{2}{d}\right)\right)^{-1} (\F{0} - \P{0})$ for $\Sigma$ by counting the minimal/maximal elements in the upper/lower half of the cube ($S^{ (d)}_0$, $\F{0}$, and $\P{0}$ of course being realisations of the random variables $\textbf{S}^{ (d)}_0$, $\BF{0}$, and $\BP{0}$), and repeat for $R$ runs. The value we expect for the mean (sum of all $S^{ (d)}_0$ values for each run divided by $R$) is zero in all cases, since the extrinsic curvature of the surface is zero.
@@ -559,7 +560,7 @@ where $d=2D$ for $d$ even and $d=2D+1$ for $d$ odd.
 % \end{equation} 
 This can be simplified to 
 \begin{equation}
-A_j^{(d)}= \gamma_j^{ (d)}   \frac{\Gamma\left (d\right)^2 (-1)^{j+1}}{\Gamma\left (\frac{d}{2} (j + 1)\right) \Gamma\left (\frac{d}{2} (2 + j)\right) \Gamma\left (2 + j\right) }
+A_j^{(d)}=   \frac{\Gamma\left (d\right)^2 (-1)^{j+1}}{\Gamma\left (\frac{d}{2} (j + 1)\right) \Gamma\left (\frac{d}{2} (2 + j)\right) \Gamma\left (2 + j\right) } \gamma_j^{ (d)}
 \label{simplercoefft} 
 \end{equation} 
 where 
@@ -587,11 +588,11 @@ and
 \end{equation} 
 Taking our cues from the behaviour of $8 \pi G S_{BD}^{ (d)}[\mathcal C]$ for $d=2,3$ in the  $N \rightarrow \infty$ limit,  we will consider the ratio
 \begin{equation} 
-\frac{ 8 \pi G S_{BD}^{ (d)}[\mathcal C]}{\vol (S^{d-2})} = \frac{b}{d (d-1) \Gamma\left (1+2/d\right) N^{\frac{d-2}{d}}} \left ( N + \frac{\beta_d}{\alpha_d} \sum_{i=1}^{n_d} C_i^{ (d)} N_i^{ (d)} \right)  
+\frac{ 8 \pi G S_{BD}^{ (d)}[\mathcal C]}{\vol (S^{d-2})} = \frac{b}{d (d-1) \Gamma\left (1+\frac2d\right) N^{\frac{d-2}{d}}} \left ( N + \frac{\beta_d}{\alpha_d} \sum_{i=1}^{n_d} C_i^{ (d)} N_i^{ (d)} \right)  
 \label{ratio} 
 \end{equation} 
 where $b=1$ for $d$ odd and $b=2$ for $d$ even.
-Using this simplification an explicit calculation in Mathematica\footnote{The above simplifications greatly aid the Mathematica calculation and allow us to extend it to higher $d$.}  for $d=2, \ldots 16$ gives 
+Using this simplification an explicit calculation in Mathematica\footnote{The above simplifications greatly aid the Mathematica calculation and allow us to extend it to higher $d$.}  for $d=2, \ldots, 16$ gives 
 \begin{equation} 
 \lim_{N \rightarrow \infty} \frac{ 8 \pi G S_{BD}^d (C)}{\vol (S^{d-2})} = 1,  
 \label{result} 
