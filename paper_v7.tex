@@ -51,7 +51,7 @@ In order to say we have a causal set analogue for a continuous expression we nee
 
 \subsection{Intuition and Relation to the Continuum}
 
-Consider a sufficiently well-behaved $d$-dimensional spacetime $(M,g)$ which admits a \emph{spacelike partitioning} surface, $\Sigma$, defined as a spacelike closed compact surface in $M$, where the causal past and future sets, $M^\pm=J^\pm (\Sigma)$, of the surface then satisfy $M^+\cap M^-=\Sigma$. With this condition it follows that no points in $M^+\setminus\Sigma$ precede any points in $M^-\setminus\Sigma$. If there does exist a $p\in M^+\setminus\Sigma$ and a $q\in M^-\setminus\Sigma$ such that $p\preceq q$, then as $q\in J^-(\Sigma)$ we find that $p\in J^-(\Sigma)$, and hence it is in the set $M^-=J^-(\Sigma)$ by definition. The intersection, $M^+\cap M^-=\Sigma$, is now only true if $p\in\Sigma$ which it does not, and hence there cannot exist such a $p$.  We also have that $\partial M^\pm = \Sigma$. The Gibbons-Hawking-York boundary term for $M^\pm$ is in natural units given by
+Consider a sufficiently well-behaved $d$-dimensional spacetime $(M,g)$, of finite volume, which admits a \emph{spacelike partitioning} surface, $\Sigma$, defined as a spacelike closed compact surface in $M$, where the causal past and future sets, $M^\pm=J^\pm (\Sigma)$, of the surface then satisfy $M^+\cap M^-=\Sigma$. With this condition it follows that no points in $M^+\setminus\Sigma$ precede any points in $M^-\setminus\Sigma$. If there does exist a $p\in M^+\setminus\Sigma$ and a $q\in M^-\setminus\Sigma$ such that $p\preceq q$, then as $q\in J^-(\Sigma)$ we find that $p\in J^-(\Sigma)$, and hence it is in the set $M^-=J^-(\Sigma)$ by definition. The intersection, $M^+\cap M^-=\Sigma$, is now only true if $p\in\Sigma$ which it does not, and hence there cannot exist such a $p$.  We also have that $\partial M^\pm = \Sigma$. The Gibbons-Hawking-York boundary term for $M^\pm$ is in natural units given by
 \be\label{eq:GHYBT_in_continuum}
 {S}^{(d)}_{GHY}\left[M^\pm\right]= \mp \frac{1}{l_p^{d-2}}\int_{\Sigma} K d\Sigma
 \ee
@@ -437,16 +437,16 @@ These objects diverge as $\rho^{1-\frac{1}{d}}$ in the limit. The factor of $\rh
 \end{gather}
 Where the last line is only true if the vectors, $\vec{p}$ and $\vec{q}$ satisfy~\eqref{area_coefficient_relation}. This concludes the proof of the spatial volume claim,~\eqref{eq:conjecture_for_area}. 
 
-We can also take the mean and limit of $\textbf{S}^{ (d)}_{GHY}$ to find
+We can also take the mean and limit of $\textbf{S}^{ (d)}_{GHY}$ and subsitute in~\eqref{eq:nmax_nmin_final} to find
 \begin{gather}\label{eq:boundary_final_proof}
 \begin{aligned}
 \lim_{\rho\rightarrow\infty} & \left\langle \textbf{S}^{ (d)}_{GHY}\right\rangle = \lim_{\rho\rightarrow\infty} \frac{\rho^{\frac{2}{d}-1}}{l_p^{d-2}} c_{d}\left (\sum_m p_m \left\langle\textbf{F}_m\right\rangle  + \sum_n q_n \left\langle\textbf{P}_n\right\rangle\right)
 \\
 = & \lim_{\rho\rightarrow\infty}\Bigg[\frac{\rho^{\frac{1}{d}}}{l_p^{d-1}}\frac{c_d}{b_d}\left(\sum_m p_m \frac{\Gamma\left (\frac{1}{d}+m \right)}{m!}  + \sum_n q_n\frac{\Gamma\left (\frac{1}{d}+n \right)}{n!} \right) \int_{\Sigma}d^{d-1}x\: \sqrt{h}
 \\
-& +\frac{1}{l_p^{d-2}}\left(\sum_m\frac{\Gamma\left (\frac{2}{d}+m \right)}{m!}  - \sum_n q_n\frac{\Gamma\left (\frac{2}{d}+n \right)}{n!} \right) \int_{\Sigma}d^{d-1}x\: \sqrt{h}K + O(\rho^{-\frac{1}{d}})\Bigg]
++ &\frac{1}{l_p^{d-2}}\left(\sum_m\frac{\Gamma\left (\frac{2}{d}+m \right)}{m!}  - \sum_n q_n\frac{\Gamma\left (\frac{2}{d}+n \right)}{n!} \right) \int_{\Sigma}d^{d-1}x\: \sqrt{h}K + O(\rho^{-\frac{1}{d}})\Bigg]
 \\
-& = \frac{1}{l_p^{d-2}}\int_{\Sigma}d^{d-1}x\: \sqrt{h}K
+= & \frac{1}{l_p^{d-2}}\int_{\Sigma}d^{d-1}x\: \sqrt{h}K
 \end{aligned}
 \end{gather}
 Where the last line is true only if the vectors $\vec{p}$ and $\vec{q}$ satisfy~\eqref{coefficient_relation1} and~\eqref{coefficient_relation2}. The proof of~\eqref{eq:mainconjecture} is now complete.
