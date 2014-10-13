@@ -8,8 +8,13 @@ We calculate the GHY boundary term for the flat causal diamond in $D$ dimensions
 \end{itemize}
 both approaching the diamond as $\epsilon\rightarrow0$. If we calculate the boundary action associated with these surfaces for non-zero $\epsilon$ and take the limit of that expression as $\epsilon\rightarrow0$ we obtain the following results. For the TL family we get
 $$
-S_{GHY} \sim2 V_{D-2}T^{D-2}\left[2(D-2)-\log\left(\frac{2T}{\epsilon}\right)\right]
+S_{GHY} \sim
+\begin{cases}
+\displaystyle4\log\left(\frac{2T}{\epsilon}\right) \qquad&\text{for }D=2\\
+\displaystyle2 V_{D-2}T^{D-2}\left[-\log\left(\frac{2T}{\epsilon}\right)+\frac{D-1}{D-2}+H_{D-3}\right]\qquad&\text{for }D>2
+\end{cases}
 $$
+where $H_n$ is the $n^{th}$harmonic number
 and for the SL family we obtain
 $$
 S_{GHY} \sim
