@@ -228,18 +228,18 @@ where $h:= det\left (h_{ij} (0,\mathbf{x})\right)$ and $\dot{}\: := \frac{\parti
 
 In order to evaluate the volume $V_\blacktriangledown (p)$ or $V_\blacktriangle (p)$ of a truncated cone we will perform a coordinate transformation to Riemann Normal Coordinates (RNCs) in a neighbourhood containing the cone. The volumes can be expressed by series expansions in $t$. We will only need to retain up to order $O(t^{d+1})$ as higher order terms will be shown to vanish when we take the limit of $\rho\rightarrow\infty$ on the mean values of~\eqref{general_boundary_sum} and~\eqref{general_area_sum}. Henceforth, whenever we state that a term of some order vanishes in the limit we mean that it vanishes in the way just stated. The discussion for the two volume integrals is identical so we will only outline it for $V_\blacktriangle (p)$ (i.e. for points to the future of $\Sigma$).
 
-Fix $p\in M$ and denote its coordinate values in GNCs by $x^\mu_p= (t_p,\mathbf x_p)$. It will be convenient to use RNCs centered not at the tip, $p$, of the cone but instead at the point $p_0$ where the unique geodesic through $p$ whose tangent is normal to $\Sigma$ intersects $\Sigma$. In GNCs this simply corresponds to the point $p_0$ with coordinates $x_0^\mu=x^\mu (p_0)= (0,\mathbf x_p)$. RNCs centered at $p_0$ will be given the symbol $y^{\overline{\mu}}$, or in terms of coordinates as $(y^{\overline{0}},\mathbf{y})=(\overline{t},\mathbf{y})$.
+Fix $p\in M$ and denote its coordinate values in GNCs by $x^\mu_p= (t_p,\mathbf x_p)$. It will be convenient to use RNCs centered not at the tip, $p$, of the cone but instead at the point $p_0$ where the unique geodesic through $p$ whose tangent is normal to $\Sigma$ intersects $\Sigma$. In GNCs this simply corresponds to the point $p_0$ with coordinates $x_0^\mu=x^\mu (p_0)= (0,\mathbf x_p)$. RNCs centered at $p_0$ will be denoted as $y^{\overline{\mu}}=(y^{\overline{0}},\mathbf{y})=(\overline{t},\mathbf{y})$.
 %\mb{let's put all facts about $x^\mu$ and $y^{\overline\mu}$ for $p$ and $p_0$ here and expansion of det in RNC.} 
-We need to assume that for any $p$ in $U_\varepsilon$, the Riemann normal neighbourhood $U_p\subset M$ (throughout which the RNC system centered at $p_0$ is well-defined) contains the truncated cone $J^- (p)\cap J^+ (\Sigma)$. This assumption seems reasonable given the that $U_\varepsilon$ can be made arbitrarily ``thin'' as $\rho\rightarrow\infty$. In RNCs the metric and the Christoffel symbols at $p_0$ are those of flat space:
+We need to assume that for any $p$ in $U_\varepsilon$, the Riemann normal neighbourhood $U_p\subset M$ throughout which the RNC system centered at $p_0$ is well-defined contains the truncated cone $J^- (p)\cap J^+ (\Sigma)$. This assumption seems reasonable given the that $U_\varepsilon$ can be made arbitrarily ``thin'' as $\rho\rightarrow\infty$. RNCs are constructed such that the metric and the Christoffel symbols at $p_0$ are those of flat space:
 \be\label{eq:RNCMetricTransAtPAndChris}
-g_{\overline{\mu} \overline{\nu}} (p_0)=\eta_{\overline{\mu} \overline{\nu}}=A^{\mu}_{\;\overline{\mu}}A^{\nu}_{\;\overline{\nu}}g_{\mu\nu} (p_0)\;,\;\;\;\;\Gamma^{\overline{\mu}}_{\;\overline{\nu}\overline{\rho}} (p_0)=0
+g_{\overline{\mu} \overline{\nu}} (p_0)=\eta_{\overline{\mu} \overline{\nu}}=A^{\mu}_{\;\overline{\mu}}A^{\nu}_{\;\overline{\nu}}g_{\mu\nu} (p_0)\;,\;\;\;\;\Gamma^{\overline{\mu}}_{\;\overline{\nu}\overline{\rho}} (p_0)=0.
 \ee
 The $A^{\mu}_{\;\overline{\mu}}$ govern the coordinate transformation from GNCs to RNCs to linear order. %but $O (x^2)$ corrections may be required. 
 To second order the coordinate transformation is given by
 \be\label{eq:RNCtotaltrans}
-y^{\overline{\mu}}=A^{\overline{\mu}}_{\;\nu}(x^\nu -x_0^{\nu})+\frac{1}{2}A^{\overline{\mu}}_{\;\mu}\Gamma^{\mu}_{\;\nu\rho} (p_0)(x^\nu -x_0^{\nu}) (x^\rho -x_0^{\rho})+O ( (x-x_0)^3).
+y^{\overline{\mu}}=A^{\overline{\mu}}_{\;\nu}(x^\nu -x_0^{\nu})+\frac{1}{2}A^{\overline{\mu}}_{\;\mu}\Gamma^{\mu}_{\;\nu\rho} (p_0)(x^\nu -x_0^{\nu}) (x^\rho -x_0^{\rho})+O ( (x-x_0)^3),
 \ee
-Where we can see that when $x^{\mu}=x_0^{\mu}$ we have that $y^{\overline{\mu}}=0$, and hence that our coordinates are centred at $p_0$. The inverse coordinate transformation to first order is
+where we can see that when $x^{\mu}=x_0^{\mu}$ we have that $y^{\overline{\mu}}=0$, and hence that our coordinates are centred at $p_0$. The inverse coordinate transformation to first order is
 \be\label{eq:RNCinversetrans}
 x^{\mu}=x_0^{\mu}+A^{\mu}_{\;\overline{\nu}}y^{\overline{\nu}}+O (y^3)
 \ee
@@ -271,11 +271,11 @@ The base of the cone in GNCs is simply a part of the surface $t=0$, so we can us
 \be\label{eq:BottomSurfaceWithGNC}
 \overline{t}=\frac{1}{2}\Gamma^{0}_{\;ij} (p_0)(x^i-x_0^i) (x^j-x_0^j)+O ( (x-x_0)^3)
 \ee
-The linear part on the right of (\ref{eq:RNCtotaltrans}) vanishes as $A^{\overline{0}}_{\;\mu}(x^{\mu}-x_0^{\mu})=t$ (as $A^{\overline{0}}_{\;i}=0$ and $A^{\overline{0}}_{\;0}=1$) and $t=0$ for the bottom surface. Using the inverse RNC relation (\ref{eq:RNCinversetrans}) one can find the equation for the bottom surface in RNCs:
+The linear part on the right hand side of (\ref{eq:RNCtotaltrans}) vanishes, since we have $A^{\overline{0}}_{\;\mu}(x^{\mu}-x_0^{\mu})=t$ (given that $A^{\overline{0}}_{\;i}=0$ and $A^{\overline{0}}_{\;0}=1$) and $t=0$ on the bottom surface. Using the inverse RNC relation (\ref{eq:RNCinversetrans}) one can find the equation for the bottom surface in RNCs:
 \be\label{eq:BottomSurface}
 \overline{t}=\frac{1}{2}\Gamma^{0}_{\;ij} (p_0)A^{i}_{\;\ibar}A^{j}_{\;\jbar}y^{\ibar} y^{\jbar}+O (y^3)
 \ee
-Let us rewrite this equation in spherically symmetric coordinates, i.e. define $r:=\sqrt{\delta_{\ibar\jbar}y^\ibar y^\jbar}$ and the usual angular coordinates $\phi_1,..,\phi_{d-2}$ in terms of the spatial coordinates $y^{\overline{1}} = r \cos (\phi_1),\ldots, y^{\overline{d-1}} = r \sin (\phi_1) \cdots \sin (\phi_{d-3}) \sin (\phi_{d-2})$. Then
+Let us rewrite this equation in spherical polar coordinates, i.e. define $r:=\sqrt{\delta_{\ibar\jbar}y^\ibar y^\jbar}$ and the usual angular coordinates $\phi_1,..,\phi_{d-2}$ in terms of the spatial coordinates $y^{\overline{1}} = r \cos (\phi_1),\ldots, y^{\overline{d-1}} = r \sin (\phi_1) \cdots \sin (\phi_{d-3}) \sin (\phi_{d-2})$. Then
 \be\label{eq:RadialBottomSurface}
 \overline{t}=\frac{1}{2}\left (\Gamma^{0}_{\;ij} (p_0)A^{i}_{\;\ibar}A^{j}_{\;\jbar}\frac{y^{\ibar} y^{\jbar}}{r^2}\right)r^2+O (y^3)=\frac{1}{2}f (\mathbf{x}_p,{\boldsymbol\phi})r^2+O (y^3)
 \ee
