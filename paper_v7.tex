@@ -230,24 +230,23 @@ In order to evaluate the volume $V_\blacktriangledown (p)$ or $V_\blacktriangle 
 
 Fix $p\in M$ and denote its coordinate values in GNCs by $x^\mu_p= (t_p,\mathbf x_p)$. It will be convenient to use RNCs centered not at the tip, $p$, of the cone but instead at the point $p_0$ where the unique geodesic through $p$ whose tangent is normal to $\Sigma$ intersects $\Sigma$. In GNCs this simply corresponds to the point $p_0$ with coordinates $x_0^\mu=x^\mu (p_0)= (0,\mathbf x_p)$. RNCs centered at $p_0$ will be denoted as $y^{\overline{\mu}}=(y^{\overline{0}},\mathbf{y})=(\overline{t},\mathbf{y})$.
 %\mb{let's put all facts about $x^\mu$ and $y^{\overline\mu}$ for $p$ and $p_0$ here and expansion of det in RNC.} 
-We need to assume that for any $p$ in $U_\varepsilon$, the Riemann normal neighbourhood $U_p\subset M$ throughout which the RNC system centered at $p_0$ is well-defined contains the truncated cone $J^- (p)\cap J^+ (\Sigma)$. This assumption seems reasonable given the that $U_\varepsilon$ can be made arbitrarily ``thin'' as $\rho\rightarrow\infty$. RNCs are constructed such that the metric and the Christoffel symbols at $p_0$ are those of flat space. Following the usual procedure, we define the coordinates $y^{\overline\mu}$ to second order by\mb{sign?}
+We need to assume that for any $p$ in $U_\varepsilon$, the Riemann normal neighbourhood $U_p\subset M$ throughout which the RNC system centered at $p_0$ is well-defined contains the truncated cone $J^- (p)\cap J^+ (\Sigma)$. This assumption seems reasonable given the that $U_\varepsilon$ can be made arbitrarily ``thin'' as $\rho\rightarrow\infty$. The RNCs are constructed such that the metric and the Christoffel symbols at $p_0$ are those of flat space. Following the usual procedure, we define the coordinates $y^{\overline\mu}$ to second order as\mb{sign?}
 \be\label{eq:RNCtotaltrans}
-y^{\overline{\mu}}=A^{\overline{\mu}}_{\;\nu}(x^\nu -x_0^{\nu})+\frac{1}{2}A^{\overline{\mu}}_{\;\mu}\Gamma^{\mu}_{\;\nu\rho} (p_0)(x^\nu -x_0^{\nu}) (x^\rho -x_0^{\rho})+O ( (x-x_0)^3),
+y^{\overline{\mu}}=A^{\overline{\mu}}_{\;\nu}(x^\nu -x_0^{\nu})+\frac{1}{2}A^{\overline{\mu}}_{\;\mu}\Gamma^{\mu}_{\;\nu\rho} (p_0)(x^\nu -x_0^{\nu}) (x^\rho -x_0^{\rho})+O ( (x-x_0)^3).
 \ee
-which satisfy $y^{\overline{\mu}}=0$ when $x^{\mu}=x_0^{\mu}$ and hence that our coordinates are centred at $p_0$
-we obtain
+These coordinates are correctly centred at $p_0$, satisfying $y^{\overline{\mu}}=0$ when $x^{\mu}=x_0^{\mu}$. If the constant matrix $A^{\overline\mu}_{\;\mu}$ obeys 
+\be\label{eq:RNCMetricTransAtPAndChris}
+A^{\overline\mu}_{\;\mu} A^{\overline\nu}_{\;\nu}\eta_{\overline\mu\overline\nu}=g_{\mu\nu}(p_0)
+\ee
+the metric and Christoffel symbols take the form
 \be\bea
-g_{\overline{\mu} \overline{\nu}} (p_0)&=A^{\mu}_{\;\overline{\mu}}A^{\nu}_{\;\overline{\nu}}g_{\mu\nu} (p_0)\\\Gamma^{\overline{\mu}}_{\;\overline{\nu}\overline{\rho}} (p_0)&=0
+g_{\overline{\mu} \overline{\nu}} (p_0)&=\eta_{\overline\mu\overline\nu}\\\Gamma^{\overline{\mu}}_{\;\overline{\nu}\overline{\rho}} (p_0)&=0.
 \eea\ee
-The inverse coordinate transformation to first order is
+The inverse coordinate transformation is
 \be\label{eq:RNCinversetrans}
-x^{\mu}=x_0^{\mu}+A^{\mu}_{\;\overline{\nu}}y^{\overline{\nu}}+O (y^3)
+x^{\mu}=x_0^{\mu}+A^{\mu}_{\;\overline{\mu}}y^{\overline{\mu}}+O (y^3)
 \ee
-where the $O(y^2)$ term vanishes due to the fact that $\Gamma^{\overline{\mu}}_{\;\overline{\nu}\overline{\rho}} (p_0)=0$. One finds that the $A^{\mu}_{\;\overline{\mu}}$ must satisfy
-\be\label{eq:RNCeqnforA}
-A^{\overline{\mu}}_{\;\mu}A^{\mu}_{\;\overline{\nu}}=\delta^{\overline{\mu}}_{\;\overline{\nu}}\;,\;\;\;\;A^{\mu}_{\;\overline{\mu}}A^{\overline{\mu}}_{\;\nu}=\delta^{\mu}_{\;\nu}.
-\ee
-Let us denote the time-coordinate of $p$ in GNCs by $T=x^0_p=t_p$. Equation~\eqref{eq:RNCMetricTransAtPAndChris} is satisfied if we set $A^{\overline 0}_{\;0}=1$, $A^{\overline 0}_{\;i}=0$ and $\delta_{\ibar\jbar}=A^i_{\;\ibar}A^j_{\;\jbar}h_{ij} (p_0)$. These relations, along with~\eqref{eq:RNCtotaltrans}, imply that $y^{\overline{0}}_p=\overline{t}_p=T+O(T^3)$.
+where $A^{\mu}_{\;\overline{\mu}}$ is the inverse matrix of $A^{\overline\mu}_{\;{\mu}}$, i.e. $A^{\overline{\mu}}_{\;\mu}A^{\mu}_{\;\overline{\nu}}=\delta^{\overline{\mu}}_{\;\overline{\nu}}$ and $A^{\mu}_{\;\overline{\mu}}A^{\overline{\mu}}_{\;\nu}=\delta^{\mu}_{\;\nu}$. There is no $O(y^2)$ term in~\eqref{eq:RNCinversetrans} due to the fact that $\Gamma^{\overline{\mu}}_{\;\overline{\nu}\overline{\rho}} (p_0)=0$. Let us denote the time-coordinate of $p$ in GNCs by $T=x^0_p=t_p$. Equation~\eqref{eq:RNCMetricTransAtPAndChris} is then satisfied if we set $A^{\overline 0}_{\;0}=1$, $A^{\overline 0}_{\;i}=0$ and $A^{\ibar}_{\;i}A^{\jbar}_{\;j}\delta_{ij} =h_{ij}(p_0)\iff\delta_{\ibar\jbar}=A^i_{\;\ibar}A^j_{\;\jbar}h_{ij} (p_0)$. These relations, along with~\eqref{eq:RNCtotaltrans}, imply that $y^{\overline{0}}_p=\overline{t}_p=T+O(T^3)$.
 
 Now the volume of the truncated cone can be found as follows. 
 %Consider the past lightcone emanating at the point $p_0= (T,\mathbf x_0)$ truncated by $\Sigma$. There is a unique point $q_0= (0,\mathbf x_0)$ on $\Sigma$ associated with $p_0$, separated from $p_0$ by proper time $T$. 
