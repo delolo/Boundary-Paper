@@ -5,3 +5,4 @@
 *.out
 *.synctex.gz
 paper_v*.pdf
+.DS_Store
